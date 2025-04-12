@@ -1,0 +1,31 @@
+\\IMPORTANT INFORMATION TO KEEP
+#Travels
+
+
+
+//-----------------------------
+
+
+
+
+
+
+\\ACCESSES ON DIFFERENT INTERFACES (SECTION B)
+#Traveler (SUBSECTION A)
+1 can choose from upcoming available trips through the recommended section, or search filters
+
+
+#Trip Operator (SUBSECTION B)
+1- OP can curate and add trip design into his collection.
+2- OP can edit and update an already designed trip.
+3- OP needs to ensure the details are accurate before the beginning date of any booked trip on OP's design. 
+4- Incase where a trip begins and it is found that there are discrepancies between the design information and actual facts(e.g. difference in prices of hotels, transport etc ),
+the OP is to be charged for any losses on the travelers' ends.  
+
+
+
+#Admin
+
+
+#Hotel
+//----------------------------------
