@@ -1,10 +1,18 @@
 
 
 \\IMPORTANT INFORMATION TO KEEP (SECTION A)
-#Travels (SUBSECTION A)
+#Travel Info (SUBSECTION A)
 1- The detailed booking history of a user will be available to the user and Us.
-2- Pricing of hotels, 
+2- Trip design information stored will be as follows : [Trip Design ID*, Trip Operator ID, ]
+3- Announced Trip information stored will be as follows : [Ann ID*, Trip Design ID*AA2, Beginning date, Ending Date, Package price ]
+4- Itinerary information stored for each trip design will be as follows : [Trip Design ID*AA2, Location, Visit Order, stay duration, Hotel ID*AB2 ]
+5- Transport route information stored for each trip design will be as follows : [Ann ID*AA2, Transport ID*AB3, From Itinerary order*AA3, To Itinerary Order*AA3, travel time ].
 
+
+#Associate Info (SUBSECTION B)
+1- User's personal details(if applicable) will be stored.
+2- Hotel provider's information stored will be as follows : [ Hotel ID*, rating, government registration, rooms[room number, capacity, pricing], location, contact email ]
+3- Transport provider's stored information will be as follows : [ Transport ID*, rating, government registration, type(bus, plane, taxi etc.), capacity, pricing ] 
 //-----------------------------
 
 
@@ -30,16 +38,16 @@
 
 #Admin (SUBSECTION B)
 1- Admin must Approve/reject user/OP (all other entities) registrations before granted access.
-2- Admin can change or manage tour categores after verfication and notify the OP about any update.
+2- Admin can change or manage tour categories after verification and notify the OP about any update.
 3. Admin can view/monitor analytics of user traffic, booking trends, and revenue generated.
 4- Admin will have access to user and booking history.  
 5- Review Moderation: Admin will have access to reviews, and can remove inappropriate reviews.
 
 #Hotel/Service Provider Interface:
-1- When the operator will assign hotel/services to the traveler, first it will get accepted/rejected the hotel/service provider in a specifc time limit. otherwise automatic rejection with a notification.
+1- When the operator will assign hotel/services to the traveler, first it will get accepted/rejected the hotel/service provider in a specific time limit. otherwise automatic rejection with a notification.
 2- Hotel/Service provider can manage their own listings.
-3- When operator reserve something for the traveler, hotel/service provider will confirm its availibility and notify the operator.
-4- Hotel/service provider will auto update room/seat availibility after each booking.
+3- When operator reserve something for the traveler, hotel/service provider will confirm its availability and notify the operator.
+4- Hotel/service provider will auto update room/seat availability after each booking.
 5- Providers will manage and track payment statuses, with reports generated automatically.
 6- May be it has to be linked with the central payment system [optional]
 
