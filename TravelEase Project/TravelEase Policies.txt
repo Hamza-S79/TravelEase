@@ -3,7 +3,7 @@
 \\IMPORTANT INFORMATION TO KEEP (SECTION A)
 #Travels (SUBSECTION A)
 1- The detailed booking history of a user will be available to the user and Us.
-
+2- Pricing of hotels, 
 
 //-----------------------------
 
@@ -17,8 +17,8 @@
 1- T can choose from upcoming available trips through the recommended section, or search filters.
 2- T is to be notified about any changes to a trip design where a booked trip based on the said trip design is upcoming.
 3- T will have a "Status" field that will show if a booking is pending ("Pending"), if it is booked ("Booked"), has ended ("Ended"), or if any information about the trip design was changed ("Updated"), or if it was cancelled ("Cancelled").
-
-
+4- T can access their booking history details.
+5- T can have multiple bookings at once. If T tries to book more than ONE booking on the same beginning date, they will not be allowed to make the second booking.
 
 #Trip Operator (SUBSECTION B)
 1- OP can curate and add trip design into his collection.
