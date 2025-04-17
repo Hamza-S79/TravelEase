@@ -1,9 +1,19 @@
 
 
 \\IMPORTANT INFORMATION TO KEEP (SECTION A)
-#Travels (SUBSECTION A)
+#Travel Info (SUBSECTION A)
 1- The detailed booking history of a user will be available to the user and Us.
-2- Pricing of hotels, 
+2- Trip design information stored will be as follows : [Trip Design ID*, Trip Operator ID, ]
+3- Announced Trip information stored will be as follows : [Ann ID*, Trip Design ID*AA2, Beginning date, Ending Date, Package price ]
+4- Itinerary information stored for each trip design will be as follows : [Trip Design ID*AA2, Location, Visit Order, stay duration, Hotel ID*AB2 ]
+5- Transport route information stored for each trip design will be as follows : [Ann ID*AA2, Transport ID*AB3, From Itinerary order*AA3, To Itinerary Order*AA3, travel time ].
+
+
+#Associate Info (SUBSECTION B)
+1- User's personal details(if applicable) will be stored.
+2- Hotel provider's information stored will be as follows : [ Hotel ID*, rating, government registration, rooms[room number, capacity, pricing], location, contact email ]
+3- Transport provider's stored information will be as follows : [ Transport ID*, rating, government registration, type(bus, plane, taxi etc.), capacity, pricing ] 
+4- Tour Operator's validity and information must be verified by the Admins; for this purpose, the admins may contact said operator or any referrals provided by said operator, or any past employers of said operator, or any other relevant persons mentioned or not mentioned by said operator.
 
 //-----------------------------
 
@@ -20,33 +30,35 @@
 4- T can access their booking history details.
 5- T can have multiple bookings at once. If T tries to book more than ONE booking on the same beginning date, they will not be allowed to make the second booking.
 
+
 #Trip Operator (SUBSECTION B)
 1- OP can curate and add trip design into his collection.
 2- OP can edit and update an already designed trip.
-3- OP needs to ensure the details are accurate before the deadline date for cancellation of any booked trip on OP's design. 
-4- Incase where a trip begins and it is found that there are discrepancies between the design information and actual facts(e.g. difference in prices of hotels, transport etc. ), the OP(individual or company) is to be charged for any losses on the travelers' ends.  
 
 
-
-#Admin (SUBSECTION B)
+#Admin (SUBSECTION C)
 1- Admin must Approve/reject user/OP (all other entities) registrations before granted access.
-2- Admin can change or manage tour categores after verfication and notify the OP about any update.
+2- Admin can change or manage tour categories after verification and notify the OP about any update.
 3. Admin can view/monitor analytics of user traffic, booking trends, and revenue generated.
-4- Admin will have access to user and booking history.  
+4- Admin will have access to User information, Tour Operator information, Announced trip information, User Booking history, .  
 5- Review Moderation: Admin will have access to reviews, and can remove inappropriate reviews.
 
-#Hotel/Service Provider Interface:
-1- When the operator will assign hotel/services to the traveler, first it will get accepted/rejected the hotel/service provider in a specifc time limit. otherwise automatic rejection with a notification.
-2- Hotel/Service provider can manage their own listings.
-3- When operator reserve something for the traveler, hotel/service provider will confirm its availibility and notify the operator.
-4- Hotel/service provider will auto update room/seat availibility after each booking.
-5- Providers will manage and track payment statuses, with reports generated automatically.
-6- May be it has to be linked with the central payment system [optional]
+
+#Hotel/Service Provider Interface (SUBSECTION D)
+1- When the operator will assign hotel/services to the traveler, first it will get accepted/rejected the hotel/service provider in a specific time limit. otherwise automatic rejection with a notification.
+2- Hotel/Service provider will be able to add/delete/update thier available services(room listings, prices, ...).
+3- Hotel/Service provider will verify the availability of rooms when an operator books/reserves rooms for a trip.
+4- Providers will manage and track payment statuses, with reports generated automatically.
+5- May be it has to be linked with the central payment system [optional]
 
 
-
-
-
-#Hotel (SUBSECTION D)
-1-
 //----------------------------------
+
+\\ACCOUNTABILITY(SECTION C)
+
+#Trip Operator Accountability(SUBSECTION A)
+1- Incase where a trip begins and it is found that there are discrepancies between the design information and actual facts(e.g. difference in prices of hotels, transport etc. ), the OP(individual or company) is to be charged for any losses on the travelers' ends.  
+2- OP needs to ensure the details are accurate three days before the deadline date for cancellation of any booked trip on OP's design. 
+
+
+//-------------------------
