@@ -46,7 +46,7 @@
 
 #Hotel/Service Provider Interface (SUBSECTION D)
 1- When the operator will assign hotel/services to the traveler, first it will get accepted/rejected the hotel/service provider in a specific time limit. otherwise automatic rejection with a notification.
-2- Hotel/Service provider will be able to add/delete/update thier available services(room listings, prices, ...).
+2- Hotel/Service provider will be able to add/delete/update their available services(room listings, prices, ...).
 3- Hotel/Service provider will verify the availability of rooms when an operator books/reserves rooms for a trip.
 4- Providers will manage and track payment statuses, with reports generated automatically.
 5- May be it has to be linked with the central payment system [optional]
