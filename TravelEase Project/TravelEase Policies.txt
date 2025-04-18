@@ -52,6 +52,10 @@
 5- May be it has to be linked with the central payment system [optional]
 
 
+#Transport Provider (SUBSECTION E)
+1- Transport vehicle prices can be updated by the transport service provider.
+2- Any listed transport vehicles' government registration needs to be verified by the admins. 
+
 //----------------------------------
 
 \\ACCOUNTABILITY(SECTION C)
