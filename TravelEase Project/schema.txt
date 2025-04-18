@@ -1,0 +1,73 @@
+1. Trip Operator
+operator_id, name, age, contact, password,  email, joined_date, rating
+
+2. Operator Person
+operator_id, name, first_name, last_name, age, contact
+
+3. Operator Corporate
+operator_id, company_name
+
+4. Trip_Design
+trip_design_id, operator_id
+
+__________________________________
+
+
+5. Announced Trip
+announced_trip_id, trip_design_id, begin_date, end_date, package_price, accessibility_tags
+
+6. Booking
+booking_id, user_id, announced_trip_id, status, budget_per_user, payment_status, paymen_method
+
+7. User
+user_id, email, joined_date, password, nationality
+
+8. Person
+user_id, name, first_name, last_name, age, contact
+
+9. Corporate
+user_id, name
+
+__________________________________
+
+10. Transport Provider
+transporter_id, name, gov_registration, email, contact_no
+
+11. Transport Vehicle
+registration_no, transporter_id, pricing, capacity
+
+12. Transport Route
+order_id, announced_trip_id, from_order_id, to_order_id, travel_time //get back here
+
+13. Hotel Provider
+hotel_id, name, email, contact_no, location
+
+14. Rooms
+hotel_id, room_no, capacity, price, status
+
+15. Activity_Provider
+activity_provider_id, type, price
+
+16. Tour Guide
+guide_id, name, rating
+
+17. Itineraries
+trip_design_id, order_id, location, stay_days, rating, add_date
+__________________________________
+
+
+18. Group 
+booking_id, group_member_id, name, age
+
+19. Stay
+hotel_id, order_id, announced_trip_id
+
+20. Tour Guide at Stay
+stay_id, guide_id
+
+21. Activities at Stay
+stay_id,  activity_provider_id
+
+22. Inquiry
+inquiry_id, user_id, operator_id, operator_response, user_inquiry, inquiry_generated_time, response_time,  , user_inquiry_review
+
