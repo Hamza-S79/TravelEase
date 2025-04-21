@@ -179,7 +179,7 @@ CREATE TABLE Booking (
     booking_id INT PRIMARY KEY,
     announced_trip_id INT,
     user_id INT,
-    status VARCHAR(50), --CHECK (status IN ('Confirmed', 'Cancelled', 'Pending'))	
+    status VARCHAR(50), -- TODO: COMPLETE THIS ==> CHECK (status IN ('Confirmed', 'Cancelled', 'Pending'))	
     budget_per_user FLOAT,
     payment_status VARCHAR(50),
     payment_method VARCHAR(50),
@@ -211,6 +211,20 @@ CREATE TABLE Trip_Group (
     FOREIGN KEY (booking_id) REFERENCES Booking(booking_id)
 );
 
+Bulk insert Trip_Group
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Trip_Group.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+SELECT * FROM Trip_Group
+
+
+
+
 -- 11. Itinerary
 CREATE TABLE Itinerary (
     trip_design_id INT,
@@ -220,11 +234,24 @@ CREATE TABLE Itinerary (
     rating FLOAT,
     add_date DATE,
     PRIMARY KEY (trip_design_id, order_id),
-    FOREIGN KEY (trip_design_id) REFERENCES TripDesign(trip_design_id)
+    FOREIGN KEY (trip_design_id) REFERENCES Trip_Design(trip_design_id)
 );
 
+Bulk insert Itinerary
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Itinerary.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+SELECT * FROM Itinerary
+
+
+
 -- 12. Transport Provider
-CREATE TABLE TransportProvider (
+CREATE TABLE Transport_Provider (
     transporter_id INT PRIMARY KEY,
     name VARCHAR(100),
     gov_registration VARCHAR(50),
@@ -233,17 +260,43 @@ CREATE TABLE TransportProvider (
     rating FLOAT
 );
 
+Bulk insert Transport_Provider
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Transport_Provider.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+SELECT * FROM Transport_Provider
+
+
+
 -- 13. Transport Vehicle
-CREATE TABLE TransportVehicle (
+CREATE TABLE Transport_Vehicle (
     registration_no VARCHAR(50) PRIMARY KEY,
     transporter_id INT,
     pricing FLOAT,
     capacity INT,
-    FOREIGN KEY (transporter_id) REFERENCES TransportProvider(transporter_id)
+    FOREIGN KEY (transporter_id) REFERENCES Transport_Provider(transporter_id)
 );
 
+Bulk insert Transport_Provider
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Transport_Provider.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Transport_Provider
+
+
 -- 14. Transport Route
-CREATE TABLE TransportRoute (
+CREATE TABLE Transport_Route (
     announced_trip_id INT,
     registration_no VARCHAR(50),
     from_order_id INT,
@@ -253,12 +306,24 @@ CREATE TABLE TransportRoute (
     planned_arrival_time DATETIME,
     actual_arrival_time DATETIME,
     PRIMARY KEY (announced_trip_id, registration_no),
-    FOREIGN KEY (announced_trip_id) REFERENCES AnnouncedTrip(announced_trip_id),
-    FOREIGN KEY (registration_no) REFERENCES TransportVehicle(registration_no)
+    FOREIGN KEY (announced_trip_id) REFERENCES Announced_Trip(announced_trip_id),
+    FOREIGN KEY (registration_no) REFERENCES Transport_Vehicle(registration_no)
 );
 
+Bulk insert Transport_Route
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Transport_Route.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Transport_Route
+
 -- 15. Hotel Provider
-CREATE TABLE HotelProvider (
+CREATE TABLE Hotel_Provider (
     hotel_id INT PRIMARY KEY,
     name VARCHAR(100),
     email VARCHAR(100),
@@ -267,6 +332,20 @@ CREATE TABLE HotelProvider (
     rating FLOAT,
     gov_registration VARCHAR(50)
 );
+
+
+Bulk insert Hotel_Provider
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Hotel_Provider.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Hotel_Provider
+
 
 -- 16. Room
 CREATE TABLE Room (
@@ -277,25 +356,85 @@ CREATE TABLE Room (
     status VARCHAR(50),
     rating FLOAT,
     PRIMARY KEY (room_no, hotel_id),
-    FOREIGN KEY (hotel_id) REFERENCES HotelProvider(hotel_id)
+    FOREIGN KEY (hotel_id) REFERENCES Hotel_Provider(hotel_id)
 );
 
+Bulk insert Room
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Room.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Room
+
+-- 21. Activity Provider
+CREATE TABLE Activity_Provider (
+    activity_provider_id INT PRIMARY KEY,
+    type VARCHAR(100),
+    price FLOAT,
+    rating FLOAT
+);
+
+Bulk insert Activity_Provider
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Activity_Provider.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Activity_Provider
+
+
+
 -- 17. Tour Guide
-CREATE TABLE TourGuide (
+CREATE TABLE Tour_Guide (
     guide_id INT PRIMARY KEY,
     name VARCHAR(100),
     rating FLOAT
 );
 
--- 18. AnnouncedTrip_Hotel
-CREATE TABLE AnnouncedTripHotel (
+Bulk insert Tour_Guide
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Tour_Guide.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Tour_Guide
+
+
+-- 18. Stay
+CREATE TABLE Stay (
     announced_trip_id INT,
     order_id INT,
     hotel_id INT,
     PRIMARY KEY (announced_trip_id, order_id, hotel_id),
-    FOREIGN KEY (announced_trip_id) REFERENCES AnnouncedTrip(announced_trip_id),
-    FOREIGN KEY (hotel_id) REFERENCES HotelProvider(hotel_id)
+    FOREIGN KEY (announced_trip_id) REFERENCES Announced_Trip(announced_trip_id),
+    FOREIGN KEY (hotel_id) REFERENCES Hotel_Provider(hotel_id)
 );
+
+Bulk insert Stay
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Stay.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Stay
+
 
 -- 19. Stay_Guide
 CREATE TABLE Stay_Guide (
@@ -303,33 +442,52 @@ CREATE TABLE Stay_Guide (
     order_id INT,
     guide_id INT,
     PRIMARY KEY (announced_trip_id, order_id, guide_id),
-    FOREIGN KEY (announced_trip_id) REFERENCES AnnouncedTrip(announced_trip_id),
-    FOREIGN KEY (guide_id) REFERENCES TourGuide(guide_id)
+    FOREIGN KEY (announced_trip_id) REFERENCES Announced_Trip(announced_trip_id),
+    FOREIGN KEY (guide_id) REFERENCES Tour_Guide(guide_id)
 );
 
--- 20. Stay
-CREATE TABLE Stay (
+Bulk insert Stay_Guide
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Stay_Guide.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Stay_Guide
+
+
+-- 20. Stay_Activity
+CREATE TABLE Stay_Activity (
     announced_trip_id INT,
     order_id INT,
     activity_provider_id INT,
     PRIMARY KEY (announced_trip_id, order_id, activity_provider_id),
-    FOREIGN KEY (announced_trip_id) REFERENCES AnnouncedTrip(announced_trip_id),
-    FOREIGN KEY (activity_provider_id) REFERENCES ActivityProvider(activity_provider_id)
+    FOREIGN KEY (announced_trip_id) REFERENCES Announced_Trip(announced_trip_id),
+    FOREIGN KEY (activity_provider_id) REFERENCES Activity_Provider(activity_provider_id)
 );
 
--- 21. Activity Provider
-CREATE TABLE ActivityProvider (
-    activity_provider_id INT PRIMARY KEY,
-    type VARCHAR(100),
-    price FLOAT,
-    rating FLOAT
-);
 
--- 22. Inquiry
+Bulk insert Stay_Activity
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Stay_Activity.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Stay_Activity
+
+
+-- 22. Inquiry (TODO: REGENERATE INQUIRY TABLE)
 CREATE TABLE Inquiry (
     inquiry_id INT PRIMARY KEY,
-    operator_id INT,
     user_id INT,
+    operator_id INT,
     operator_response TEXT,
     user_inquiry TEXT,
     inquiry_generated_time DATETIME,
@@ -338,3 +496,15 @@ CREATE TABLE Inquiry (
     FOREIGN KEY (user_id) REFERENCES AppUser(user_id),
     FOREIGN KEY (operator_id) REFERENCES Trip_Operator(operator_id)
 );
+
+Bulk insert Inquiry
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Inquiry.csv'
+with
+(
+FORMAT = 'csv',
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '0x0a',
+FIRSTROW = 2
+)
+
+SELECT * FROM Inquiry
