@@ -1,0 +1,41 @@
+hotel_id,name,email,contact_no,location,rating,gov_registration
+1,Barcelona Resort,contact1@barcelonaresort.com,+34-912-345-1001,Barcelona,4.3,GOV-2001
+2,Madrid Villa,contact2@madridvilla.com,+34-912-345-1002,Madrid,4.3,GOV-2002
+3,Valencia Inn,contact3@valenciainn.com,+34-912-345-1003,Valencia,4.4,GOV-2003
+4,Seville Resort,contact4@sevilleresort.com,+34-912-345-1004,Seville,4.9,GOV-2004
+5,Zaragoza Lodge,contact5@zaragozalodge.com,+34-912-345-1005,Zaragoza,4.7,GOV-2005
+6,Málaga Hotel,contact6@málagahotel.com,+34-912-345-1006,Málaga,4.1,GOV-2006
+7,Murcia Palace,contact7@murciapalace.com,+34-912-345-1007,Murcia,5.0,GOV-2007
+8,Palma Hotel,contact8@palmahotel.com,+34-912-345-1008,Palma,4.7,GOV-2008
+9,Las Palmas Resort,contact9@laspalmasresort.com,+34-912-345-1009,Las Palmas,4.4,GOV-2009
+10,Bilbao Suites,contact10@bilbaosuites.com,+34-912-345-1010,Bilbao,4.3,GOV-2010
+11,Alicante Inn,contact11@alicanteinn.com,+34-912-345-1011,Alicante,4.3,GOV-2011
+12,Córdoba Inn,contact12@córdobainn.com,+34-912-345-1012,Córdoba,4.8,GOV-2012
+13,Valladolid Lodge,contact13@valladolidlodge.com,+34-912-345-1013,Valladolid,4.6,GOV-2013
+14,Vigo Hotel,contact14@vigohotel.com,+34-912-345-1014,Vigo,4.2,GOV-2014
+15,Gijón Villa,contact15@gijónvilla.com,+34-912-345-1015,Gijón,4.6,GOV-2015
+16,Badalona Palace,contact16@badalonapalace.com,+34-912-345-1016,Badalona,4.1,GOV-2016
+17,A Coruña Suites,contact17@acoruñasuites.com,+34-912-345-1017,A Coruña,4.7,GOV-2017
+18,Granada Suites,contact18@granadasuites.com,+34-912-345-1018,Granada,4.6,GOV-2018
+19,Elche Suites,contact19@elchesuites.com,+34-912-345-1019,Elche,4.3,GOV-2019
+20,Oviedo Villa,contact20@oviedovilla.com,+34-912-345-1020,Oviedo,4.5,GOV-2020
+21,Badalona Inn,contact21@badalonainn.com,+34-912-345-1021,Badalona,4.4,GOV-2021
+22,Cartagena Inn,contact22@cartagenainn.com,+34-912-345-1022,Cartagena,4.7,GOV-2022
+23,Terrassa Lodge,contact23@terrassalodge.com,+34-912-345-1023,Terrassa,4.5,GOV-2023
+24,Jerez de la Frontera Palace,contact24@jerezdelafronterapalace.com,+34-912-345-1024,Jerez de la Frontera,4.3,GOV-2024
+25,Sabadell Resort,contact25@sabadellresort.com,+34-912-345-1025,Sabadell,4.4,GOV-2025
+26,Móstoles Lodge,contact26@móstoleslodge.com,+34-912-345-1026,Móstoles,4.1,GOV-2026
+27,Alcalá de Henares Resort,contact27@alcaládehenaresresort.com,+34-912-345-1027,Alcalá de Henares,4.3,GOV-2027
+28,Pamplona Resort,contact28@pamplonaresort.com,+34-912-345-1028,Pamplona,4.8,GOV-2028
+29,Fuenlabrada Villa,contact29@fuenlabradavilla.com,+34-912-345-1029,Fuenlabrada,4.3,GOV-2029
+30,Almería Inn,contact30@almeríainn.com,+34-912-345-1030,Almería,4.1,GOV-2030
+31,Leganés Suites,contact31@leganéssuites.com,+34-912-345-1031,Leganés,4.7,GOV-2031
+32,San Sebastián Resort,contact32@sansebastiánresort.com,+34-912-345-1032,San Sebastián,4.1,GOV-2032
+33,Getafe Lodge,contact33@getafelodge.com,+34-912-345-1033,Getafe,4.7,GOV-2033
+34,Burgos Lodge,contact34@burgoslodge.com,+34-912-345-1034,Burgos,4.6,GOV-2034
+35,Salamanca Palace,contact35@salamancapalace.com,+34-912-345-1035,Salamanca,4.8,GOV-2035
+36,Albacete Hotel,contact36@albacetehotel.com,+34-912-345-1036,Albacete,4.4,GOV-2036
+37,Castellón de la Plana Palace,contact37@castellóndelaplanapalace.com,+34-912-345-1037,Castellón de la Plana,4.0,GOV-2037
+38,Cádiz Hotel,contact38@cádizhotel.com,+34-912-345-1038,Cádiz,4.5,GOV-2038
+39,Santander Hotel,contact39@santanderhotel.com,+34-912-345-1039,Santander,4.9,GOV-2039
+40,Logroño Lodge,contact40@logroñolodge.com,+34-912-345-1040,Logroño,4.4,GOV-2040

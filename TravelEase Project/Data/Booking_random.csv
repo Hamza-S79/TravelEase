@@ -1,0 +1,121 @@
+booking_id,announced_trip_id,user_id,status,budget_per_user,payment_status,payment_method
+1,41,15,Confirmed,1000.00,Refunded,PayPal
+2,16,29,Confirmed,1750.00,Refunded,Credit Card
+3,44,95,Cancelled,1150.00,Paid,Bank Transfer
+4,28,5,Confirmed,1350.00,Paid,Credit Card
+5,15,65,Cancelled,1700.00,Paid,Bank Transfer
+6,13,92,Cancelled,1600.00,Refunded,Bank Transfer
+7,27,29,Pending,1300.00,Refunded,PayPal
+8,1,98,Confirmed,1000.00,Refunded,PayPal
+9,22,36,Confirmed,1050.00,Paid,PayPal
+10,7,12,Pending,1300.00,Paid,PayPal
+11,23,78,Pending,1100.00,Paid,Bank Transfer
+12,30,69,Confirmed,1450.00,Unpaid,Credit Card
+13,36,38,Cancelled,1750.00,Refunded,PayPal
+14,37,25,Cancelled,1800.00,Paid,Credit Card
+15,43,30,Pending,1100.00,Paid,Credit Card
+16,7,49,Pending,1300.00,Unpaid,Bank Transfer
+17,24,21,Pending,1150.00,Unpaid,Credit Card
+18,43,35,Cancelled,1100.00,Refunded,Bank Transfer
+19,5,78,Cancelled,1200.00,Paid,Bank Transfer
+20,47,32,Confirmed,1300.00,Unpaid,PayPal
+21,18,82,Cancelled,1850.00,Refunded,Credit Card
+22,44,42,Confirmed,1150.00,Paid,Credit Card
+23,21,52,Pending,1000.00,Paid,Credit Card
+24,37,92,Pending,1800.00,Paid,Bank Transfer
+25,32,51,Cancelled,1550.00,Unpaid,Credit Card
+26,17,18,Confirmed,1800.00,Refunded,Bank Transfer
+27,35,34,Cancelled,1700.00,Refunded,PayPal
+28,38,52,Pending,1850.00,Paid,Credit Card
+29,33,64,Confirmed,1600.00,Paid,Credit Card
+30,10,81,Confirmed,1450.00,Refunded,PayPal
+31,39,9,Pending,1900.00,Unpaid,Bank Transfer
+32,30,68,Pending,1450.00,Refunded,Credit Card
+33,44,93,Confirmed,1150.00,Refunded,Bank Transfer
+34,49,35,Cancelled,1400.00,Unpaid,Credit Card
+35,19,56,Confirmed,1900.00,Unpaid,Credit Card
+36,47,93,Pending,1300.00,Refunded,Credit Card
+37,33,14,Cancelled,1600.00,Unpaid,Bank Transfer
+38,33,78,Confirmed,1600.00,Paid,PayPal
+39,49,21,Cancelled,1400.00,Refunded,Credit Card
+40,39,42,Pending,1900.00,Paid,Credit Card
+41,24,40,Confirmed,1150.00,Paid,Credit Card
+42,37,11,Confirmed,1800.00,Refunded,PayPal
+43,5,98,Cancelled,1200.00,Paid,Credit Card
+44,43,61,Cancelled,1100.00,Paid,PayPal
+45,34,78,Pending,1650.00,Paid,Bank Transfer
+46,49,94,Cancelled,1400.00,Paid,Bank Transfer
+47,20,52,Cancelled,1950.00,Refunded,PayPal
+48,29,67,Pending,1400.00,Paid,Credit Card
+49,15,9,Pending,1700.00,Paid,Bank Transfer
+50,36,30,Cancelled,1750.00,Paid,Credit Card
+51,5,91,Cancelled,1200.00,Paid,Credit Card
+52,5,5,Pending,1200.00,Paid,Bank Transfer
+53,16,36,Cancelled,1750.00,Unpaid,Credit Card
+54,35,17,Cancelled,1700.00,Refunded,Bank Transfer
+55,31,32,Pending,1500.00,Unpaid,Credit Card
+56,7,13,Cancelled,1300.00,Unpaid,PayPal
+57,28,53,Pending,1350.00,Refunded,Credit Card
+58,44,84,Cancelled,1150.00,Paid,Credit Card
+59,26,94,Pending,1250.00,Paid,Credit Card
+60,13,25,Cancelled,1600.00,Unpaid,Credit Card
+61,28,24,Pending,1350.00,Unpaid,Credit Card
+62,5,57,Cancelled,1200.00,Paid,Credit Card
+63,42,70,Confirmed,1050.00,Paid,Credit Card
+64,11,53,Pending,1500.00,Unpaid,Credit Card
+65,26,8,Confirmed,1250.00,Unpaid,Credit Card
+66,25,34,Pending,1200.00,Unpaid,PayPal
+67,45,94,Cancelled,1200.00,Refunded,Bank Transfer
+68,32,20,Confirmed,1550.00,Unpaid,Credit Card
+69,4,75,Cancelled,1150.00,Refunded,Credit Card
+70,48,41,Confirmed,1350.00,Paid,Bank Transfer
+71,31,65,Cancelled,1500.00,Paid,Credit Card
+72,33,11,Confirmed,1600.00,Paid,Bank Transfer
+73,5,87,Confirmed,1200.00,Unpaid,Credit Card
+74,37,32,Cancelled,1800.00,Refunded,Credit Card
+75,40,11,Pending,1950.00,Refunded,Bank Transfer
+76,37,67,Pending,1800.00,Unpaid,Credit Card
+77,43,92,Pending,1100.00,Paid,PayPal
+78,26,17,Cancelled,1250.00,Refunded,PayPal
+79,30,41,Confirmed,1450.00,Paid,PayPal
+80,40,73,Confirmed,1950.00,Paid,Bank Transfer
+81,14,65,Pending,1650.00,Paid,PayPal
+82,5,32,Pending,1200.00,Unpaid,Credit Card
+83,29,70,Cancelled,1400.00,Unpaid,Bank Transfer
+84,42,68,Confirmed,1050.00,Refunded,Bank Transfer
+85,20,85,Confirmed,1950.00,Paid,PayPal
+86,8,14,Cancelled,1350.00,Refunded,Credit Card
+87,18,37,Cancelled,1850.00,Paid,Bank Transfer
+88,22,27,Cancelled,1050.00,Refunded,PayPal
+89,33,63,Pending,1600.00,Paid,Credit Card
+90,41,55,Pending,1000.00,Paid,Credit Card
+91,22,99,Confirmed,1050.00,Refunded,PayPal
+92,11,95,Pending,1500.00,Refunded,Bank Transfer
+93,28,72,Confirmed,1350.00,Paid,Credit Card
+94,45,20,Cancelled,1200.00,Paid,PayPal
+95,38,71,Confirmed,1850.00,Unpaid,Credit Card
+96,3,40,Pending,1100.00,Paid,PayPal
+97,14,88,Confirmed,1650.00,Refunded,Credit Card
+98,23,100,Cancelled,1100.00,Unpaid,Bank Transfer
+99,48,20,Confirmed,1350.00,Paid,Credit Card
+100,27,4,Confirmed,1300.00,Refunded,PayPal
+101,27,86,Cancelled,1300.00,Paid,PayPal
+102,11,90,Confirmed,1500.00,Unpaid,Credit Card
+103,31,29,Confirmed,1500.00,Unpaid,PayPal
+104,20,30,Confirmed,1950.00,Paid,Bank Transfer
+105,13,52,Pending,1600.00,Unpaid,Credit Card
+106,50,36,Pending,1450.00,Refunded,Bank Transfer
+107,26,87,Cancelled,1250.00,Unpaid,Credit Card
+108,8,34,Confirmed,1350.00,Refunded,PayPal
+109,3,14,Cancelled,1100.00,Unpaid,PayPal
+110,47,41,Pending,1300.00,Refunded,Bank Transfer
+111,8,50,Cancelled,1350.00,Paid,PayPal
+112,3,91,Pending,1100.00,Paid,Bank Transfer
+113,35,88,Cancelled,1700.00,Refunded,Bank Transfer
+114,43,26,Pending,1100.00,Unpaid,Credit Card
+115,43,43,Cancelled,1100.00,Unpaid,Bank Transfer
+116,8,93,Pending,1350.00,Refunded,PayPal
+117,43,53,Pending,1100.00,Unpaid,Bank Transfer
+118,19,71,Confirmed,1900.00,Paid,PayPal
+119,43,49,Cancelled,1100.00,Refunded,Credit Card
+120,36,1,Pending,1750.00,Unpaid,Credit Card
