@@ -282,8 +282,8 @@ CREATE TABLE Transport_Vehicle (
     FOREIGN KEY (transporter_id) REFERENCES Transport_Provider(transporter_id)
 );
 
-Bulk insert Transport_Provider
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Transport_Provider.csv'
+Bulk insert Transport_Vehicle
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Transport_Vehicle.csv'
 with
 (
 FORMAT = 'csv',
@@ -292,7 +292,7 @@ ROWTERMINATOR = '0x0a',
 FIRSTROW = 2
 )
 
-SELECT * FROM Transport_Provider
+SELECT * FROM Transport_Vehicle
 
 
 -- 14. Transport Route
@@ -371,7 +371,7 @@ FIRSTROW = 2
 
 SELECT * FROM Room
 
--- 21. Activity Provider
+-- 17. Activity Provider
 CREATE TABLE Activity_Provider (
     activity_provider_id INT PRIMARY KEY,
     type VARCHAR(100),
@@ -393,7 +393,7 @@ SELECT * FROM Activity_Provider
 
 
 
--- 17. Tour Guide
+-- 18. Tour Guide
 CREATE TABLE Tour_Guide (
     guide_id INT PRIMARY KEY,
     name VARCHAR(100),
@@ -413,7 +413,7 @@ FIRSTROW = 2
 SELECT * FROM Tour_Guide
 
 
--- 18. Stay
+-- 19. Stay
 CREATE TABLE Stay (
     announced_trip_id INT,
     order_id INT,
@@ -436,7 +436,7 @@ FIRSTROW = 2
 SELECT * FROM Stay
 
 
--- 19. Stay_Guide
+-- 20. Stay_Guide
 CREATE TABLE Stay_Guide (
     announced_trip_id INT,
     order_id INT,
@@ -459,7 +459,7 @@ FIRSTROW = 2
 SELECT * FROM Stay_Guide
 
 
--- 20. Stay_Activity
+-- 21. Stay_Activity
 CREATE TABLE Stay_Activity (
     announced_trip_id INT,
     order_id INT,
@@ -507,4 +507,33 @@ ROWTERMINATOR = '0x0a',
 FIRSTROW = 2
 )
 
+-- 23 Admin TODO: admin needs to be added
+CREATE TABLE Admin (
+    admin_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(100),
+    role VARCHAR(50) -- e.g., 'superadmin', 'moderator'
+);
+
 SELECT * FROM Inquiry
+
+
+SELECT * FROM Trip_Operator;
+SELECT * FROM Operator_Person;
+SELECT * FROM Operator_Corporate;
+SELECT * FROM Trip_Design;
+SELECT * FROM Announced_Trip;
+SELECT * FROM App_User;
+SELECT * FROM User_Person;
+SELECT * FROM User_Corporate;
+SELECT * FROM Booking;
+SELECT * FROM Trip_Group;
+SELECT * FROM Itinerary;
+SELECT * FROM Transport_Provider;
+SELECT * FROM Transport_Vehicle;
+SELECT * FROM Transport_Route;
+SELECT * FROM Hotel_Provider;
+SELECT * FROM Room;
+SELECT * FROM Activity_Provider;
+SELECT * FROM Tour_Guide;
