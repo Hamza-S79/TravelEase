@@ -12,7 +12,7 @@ CREATE TABLE Trip_Operator (
 
 
 Bulk insert Trip_Operator
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Trip_Operator.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Trip_Operator.csv'
 with
 (
 FORMAT = 'csv',
@@ -34,7 +34,7 @@ CREATE TABLE Operator_Person (
 );
 
 Bulk insert Operator_Person
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Operator_Person.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Operator_Person.csv'
 with
 (
 FORMAT = 'csv',
@@ -53,7 +53,7 @@ CREATE TABLE Operator_Corporate (
 );
 
 Bulk insert Operator_Corporate
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Operator_Corporate.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Operator_Corporate.csv'
 with
 (
 FORMAT = 'csv',
@@ -74,7 +74,7 @@ CREATE TABLE Trip_Design (
 );
 
 Bulk insert Trip_Design
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Trip_Design.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Trip_Design.csv'
 with
 (
 FORMAT = 'csv',
@@ -100,7 +100,7 @@ CREATE TABLE Announced_Trip (
 );
 
 Bulk insert Announced_Trip
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Announced_Trip.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Announced_Trip.csv'
 with
 (
 FORMAT = 'csv',
@@ -123,7 +123,7 @@ CREATE TABLE App_User (
 
 
 Bulk insert App_User
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\App_User.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\App_User.csv'
 with
 (
 FORMAT = 'csv',
@@ -145,7 +145,7 @@ CREATE TABLE User_Person (
 );
 
 Bulk insert User_Person
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\User_Person.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\User_Person.csv'
 with
 (
 FORMAT = 'csv',
@@ -163,7 +163,7 @@ CREATE TABLE User_Corporate (
 );
 
 Bulk insert User_Corporate
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\User_Corporate.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\User_Corporate.csv'
 with
 (
 FORMAT = 'csv',
@@ -190,7 +190,7 @@ CREATE TABLE Booking (
 
 
 Bulk insert Booking
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Booking.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Booking.csv'
 with
 (
 FORMAT = 'csv',
@@ -212,7 +212,7 @@ CREATE TABLE Trip_Group (
 );
 
 Bulk insert Trip_Group
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Trip_Group.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Trip_Group.csv'
 with
 (
 FORMAT = 'csv',
@@ -238,7 +238,7 @@ CREATE TABLE Itinerary (
 );
 
 Bulk insert Itinerary
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Itinerary.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Itinerary.csv'
 with
 (
 FORMAT = 'csv',
@@ -261,7 +261,7 @@ CREATE TABLE Transport_Provider (
 );
 
 Bulk insert Transport_Provider
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Transport_Provider.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Transport_Provider.csv'
 with
 (
 FORMAT = 'csv',
@@ -283,7 +283,7 @@ CREATE TABLE Transport_Vehicle (
 );
 
 Bulk insert Transport_Vehicle
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Transport_Vehicle.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Transport_Vehicle.csv'
 with
 (
 FORMAT = 'csv',
@@ -311,7 +311,7 @@ CREATE TABLE Transport_Route (
 );
 
 Bulk insert Transport_Route
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Transport_Route.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Transport_Route.csv'
 with
 (
 FORMAT = 'csv',
@@ -335,7 +335,7 @@ CREATE TABLE Hotel_Provider (
 
 
 Bulk insert Hotel_Provider
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Hotel_Provider.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Hotel_Provider.csv'
 with
 (
 FORMAT = 'csv',
@@ -351,16 +351,16 @@ SELECT * FROM Hotel_Provider
 CREATE TABLE Room (
     room_no INT,
     hotel_id INT,
-    type VARCHAR(50),
+    capacity INT,
     price FLOAT,
     status VARCHAR(50),
-    rating FLOAT,
+    --rating FLOAT,
     PRIMARY KEY (room_no, hotel_id),
     FOREIGN KEY (hotel_id) REFERENCES Hotel_Provider(hotel_id)
 );
 
 Bulk insert Room
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Room.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Room.csv'
 with
 (
 FORMAT = 'csv',
@@ -380,7 +380,7 @@ CREATE TABLE Activity_Provider (
 );
 
 Bulk insert Activity_Provider
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Activity_Provider.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Activity_Provider.csv'
 with
 (
 FORMAT = 'csv',
@@ -401,7 +401,7 @@ CREATE TABLE Tour_Guide (
 );
 
 Bulk insert Tour_Guide
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Tour_Guide.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Tour_Guide.csv'
 with
 (
 FORMAT = 'csv',
@@ -424,7 +424,7 @@ CREATE TABLE Stay (
 );
 
 Bulk insert Stay
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Stay.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Stay.csv'
 with
 (
 FORMAT = 'csv',
@@ -447,7 +447,7 @@ CREATE TABLE Stay_Guide (
 );
 
 Bulk insert Stay_Guide
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Stay_Guide.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Stay_Guide.csv'
 with
 (
 FORMAT = 'csv',
@@ -471,7 +471,7 @@ CREATE TABLE Stay_Activity (
 
 
 Bulk insert Stay_Activity
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Stay_Activity.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Stay_Activity.csv'
 with
 (
 FORMAT = 'csv',
@@ -498,7 +498,7 @@ CREATE TABLE Inquiry (
 );
 
 Bulk insert Inquiry
-from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Inquiry.csv'
+from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Inquiry.csv'
 with
 (
 FORMAT = 'csv',
