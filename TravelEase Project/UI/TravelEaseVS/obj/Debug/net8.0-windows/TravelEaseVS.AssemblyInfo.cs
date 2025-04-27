@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TravelEaseVS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06b83e8806e6eb6e9e62f52aab64d23f612bfcf8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+924bcab761a0b4758d3ca62728cf2eb1d65ebb3f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TravelEaseVS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TravelEaseVS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

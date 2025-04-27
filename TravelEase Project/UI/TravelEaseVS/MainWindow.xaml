@@ -4,10 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelEaseVS"
+        xmlns:viewModel ="clr-namespace:TravelEaseVS.MVVM.ViewModel"
         mc:Ignorable="d"
         Background="#FAF0E6"
         
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.DataContext>
+        <viewModel:ViewHandler/>
+    </Window.DataContext>
 
     <Border>
         <Grid Background="Transparent">
@@ -60,10 +65,11 @@
 
                
 
-                    <Button Style="{StaticResource NavButton}" Grid.Row="0" Content="Home" />
-                <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Active Bookings"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Active Trips"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="My Travel Book"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="0" Content="Home" Command="{Binding HMVCommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Announced Trips" Command="{Binding ATVCommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Active Bookings"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Active Trips"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="4" Content="My Travel Book"/>
 
 
 
@@ -71,6 +77,10 @@
 
             </Grid>
 
+            <ContentControl Grid.Column="1" Grid.Row="1"
+                            Margin="10"
+                            Content="{Binding MyView}"
+                            />
 
         </Grid>
 

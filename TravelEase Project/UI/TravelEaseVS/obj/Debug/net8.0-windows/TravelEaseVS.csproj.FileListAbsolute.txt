@@ -22,3 +22,8 @@ C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\D
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\Styles\Theme.baml
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\App.baml
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\Styles\Colors.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\HomeView.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\HomeView.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\AnnouncedTripsView.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\AnnouncedTripsView.baml
