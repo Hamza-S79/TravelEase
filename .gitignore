@@ -21,3 +21,27 @@ _ReSharper*/
 *.log
 *.tmp
 *.cache
+
+
+# Visual Studio files #
+*.suo
+*.user
+*.sln.docstates
+*.testsettings
+*.vspscc
+_ReSharper*/
+*.csproj.user
+*.AssemblyInfo.cs
+ComponentCache/
+packages/
+
+# Build results #
+[Dd]ebug/
+[Rr]elease/
+bin/
+obj/
+
+# NuGet cache #
+packages/
+*.nupkg
+*.snupkg
