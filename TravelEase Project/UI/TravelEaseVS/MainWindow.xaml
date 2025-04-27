@@ -10,7 +10,7 @@
         Title="MainWindow" Height="450" Width="800">
 
     <Border>
-        <Grid Background="Transparent" x:Name="grid">
+        <Grid Background="Transparent">
             <Grid.ColumnDefinitions>
 
 
@@ -33,7 +33,12 @@
                 </RowDefinition>
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="0" Grid.ColumnSpan="3" Background="{StaticResource Color1}">
+            <Border 
+                Grid.Row="0" 
+                Grid.ColumnSpan="3" 
+                Background="{StaticResource Color1}"
+                BorderBrush="{StaticResource Color1}"
+                >
             </Border>
                  
                        
