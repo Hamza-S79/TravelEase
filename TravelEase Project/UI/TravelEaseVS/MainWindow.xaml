@@ -8,34 +8,32 @@
         mc:Ignorable="d"
         Background="#FAF0E6"
         
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="740" Width="1300">
 
     <Window.DataContext>
         <viewModel:ViewHandler/>
     </Window.DataContext>
 
     <Border>
-        <Grid Background="Transparent">
+        <Grid Background="Transparent"><!--Main Grid-->
+            
             <Grid.ColumnDefinitions>
 
 
                 <ColumnDefinition Width="1.61*"/>
 
+                <ColumnDefinition Width="6.84*"/>
 
-                <ColumnDefinition Width="4.23*">
-                </ColumnDefinition>
-                <ColumnDefinition Width="1*">
-                </ColumnDefinition>
+                <ColumnDefinition Width="1*"/>
+
             </Grid.ColumnDefinitions>
+
 
             <Grid.RowDefinitions>
 
-                <RowDefinition Height="1*">
-                </RowDefinition>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="6.84*"/>
 
-
-                <RowDefinition Height="4.235*">
-                </RowDefinition>
             </Grid.RowDefinitions>
 
             <Border 
@@ -45,8 +43,11 @@
                 BorderBrush="{StaticResource Color1}"
                 >
             </Border>
-                 
-                       
+            
+
+
+
+
 
             <Grid Grid.Row="1" Background="{StaticResource Color1}">
 
@@ -77,6 +78,48 @@
 
             </Grid>
 
+            <Grid Grid.Row="0" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+
+
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="2">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height ="*"/>
+                        <RowDefinition Height ="2*"/>
+                        <RowDefinition Height ="*"/>
+
+                    </Grid.RowDefinitions>
+                    
+
+                    <Border Background="#F1F1F1"
+                        CornerRadius="18"
+                        BorderBrush="Gray"
+                        BorderThickness="1"
+                        
+                            Grid.Row="1">
+
+                        <TextBox  
+                          x:Name="SearchBox"
+                          Background="Transparent"
+                          BorderThickness="0"
+                          VerticalContentAlignment="Center"
+                          Padding="10,0,35,0"
+                          FontSize="14"
+                          Text="Search..."
+                          GotFocus="SearchBox_GotFocus"
+                          LostFocus="SearchBox_LostFocus"
+                          Foreground="Gray" TextChanged="SearchBox_TextChanged"/>
+
+                    </Border>
+                </Grid>
+            </Grid>
+            
             <ContentControl Grid.Column="1" Grid.Row="1"
                             Margin="10"
                             Content="{Binding MyView}"

@@ -22,7 +22,7 @@
                         <TextBlock Text = "{TemplateBinding Property=Content}"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
-                         FontSize="20"
+                         FontSize="18"
                          FontFamily="/Fonts/Space_Mono/SpaceMono-Regular.ttf"
                          Foreground="{TemplateBinding Foreground}"
                         >

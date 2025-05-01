@@ -4,10 +4,83 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TravelEaseVS.MVVM.View"
-             mc:Ignorable="d" Background="Transparent"
+             mc:Ignorable="d" Background="Linen"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="HOME HOME" FontSize="30" />
+   
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      PanningRatio="0.00001"
+                      PanningDeceleration="2000"
+                      >
+        <ScrollViewer.Resources>
+            <Style TargetType="{x:Type ScrollBar}">
+                <Setter Property="Width" Value="1"/>
 
-    </Grid>
+            </Style>
+        </ScrollViewer.Resources>
+            
+        <Grid Height="900">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="1" Margin="15" Background="PaleVioletRed" CornerRadius="20">
+
+
+                </Border>
+
+                <Border Grid.Column="2" Margin="15" Background="Aqua" CornerRadius="20">
+                </Border>
+
+                <Border Grid.Column="0" Margin="15" Background="{StaticResource Color2}" CornerRadius="20">
+                    <TextBlock
+                        Text="Check out our&#x0a;Featured Trips"
+                        Foreground="White"
+                        FontSize="45"
+                        Margin="12,10,0,0"
+                        FontWeight="Demibold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+                        />
+                    
+                </Border>
+            </Grid>
+            
+            <Grid Grid.Row="1">
+
+            </Grid>
+            
+            <Grid Grid.Row="2">
+                
+            </Grid>
+            
+            <Grid Grid.Row="3">
+                
+            </Grid>
+
+
+            <TextBlock Text="A" Grid.Row="0" FontSize="20"/>
+            <TextBlock Text="B" Grid.Row="1" FontSize="20"/>
+            <TextBlock Text="C" Grid.Row="2" FontSize="20"/>
+            <TextBlock Text="D" Grid.Row="3" FontSize="20"/>
+
+
+        </Grid>
+        </ScrollViewer>
+
+
+
+   
 </UserControl>

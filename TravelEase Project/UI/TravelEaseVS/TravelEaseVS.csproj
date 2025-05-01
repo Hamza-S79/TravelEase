@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Space_Mono\SpaceMono-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Space_Mono\SpaceMono-Regular.ttf" />
   </ItemGroup>
 
 </Project>
