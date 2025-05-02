@@ -150,8 +150,8 @@
                 <LinearGradientBrush
   
 >
-                    <GradientStop Color="{StaticResource Color3a}" Offset="0.0"/>
-                    <GradientStop Color="{StaticResource Color3b}" Offset="1"/>
+                    <GradientStop Color="{StaticResource Color1a}" Offset="0.0"/>
+                    <GradientStop Color="{StaticResource Color1b}" Offset="1"/>
 
                 </LinearGradientBrush>
 
