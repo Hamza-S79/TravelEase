@@ -5,7 +5,7 @@
              xmlns:viewModel ="clr-namespace:TravelEaseVS.MVVM.ViewModel"
              xmlns:view ="clr-namespace:TravelEaseVS.MVVM.View"
              
-             StartupUri="MainWindow.xaml">
+             StartupUri="OtherWindows/login.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

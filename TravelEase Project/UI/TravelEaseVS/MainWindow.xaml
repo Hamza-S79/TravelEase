@@ -126,8 +126,14 @@
                             Content="{Binding MyView}"
                             />
 
+
+
         </Grid>
 
+        
+
+
     </Border>
+        
 
 </Window>

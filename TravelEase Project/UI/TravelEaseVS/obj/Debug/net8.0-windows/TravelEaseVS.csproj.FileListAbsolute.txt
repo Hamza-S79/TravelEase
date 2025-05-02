@@ -29,3 +29,13 @@ C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\D
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\AnnouncedTripsView.baml
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\TripInfo.g.cs
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\TripInfo.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\HotelForm.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\OperatorForm.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\TravelerForm.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\OtherWindows\login.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\OtherWindows\signup.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\HotelForm.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\OperatorForm.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\TravelerForm.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\OtherWindows\login.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\OtherWindows\signup.baml
