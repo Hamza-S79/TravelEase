@@ -13,8 +13,10 @@ namespace TravelEaseVS.MVVM.ViewModel
         public RelayCommand HMVCommand {  get; set; }
         public RelayCommand ATVCommand { get; set; }
 
+        public RelayCommand TICommand { get; set; }
         public HomeViewModel hmv {get;set;}
 
+        public TripInfo TRI { get; set;}
         public AnnouncedTripsModel ATV { get; set; }
 
         private object curr_view;
@@ -47,6 +49,8 @@ namespace TravelEaseVS.MVVM.ViewModel
             {
                 MyView = ATV;
             });
+
+            TICommand = new RelayCommand(o => { MyView = TRI; });
         }
     }
     

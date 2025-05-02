@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\App.xaml
-52123732383
+6-1323071982
 
-111667850476
+131416856368
 198-294894759
-MainWindow.xaml;MVVM\View\AnnouncedTripsView.xaml;MVVM\View\HomeView.xaml;Styles\Colors.xaml;Styles\Theme.xaml;
+MainWindow.xaml;MVVM\View\AnnouncedTripsView.xaml;MVVM\View\HomeView.xaml;MVVM\View\TripInfo.xaml;Styles\Colors.xaml;Styles\Theme.xaml;
 
 False
 

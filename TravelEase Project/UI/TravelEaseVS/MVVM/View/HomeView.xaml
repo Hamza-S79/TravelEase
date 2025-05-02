@@ -36,26 +36,91 @@
 
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Column="1" Margin="15" Background="PaleVioletRed" CornerRadius="20">
-
+                <Border Style="{StaticResource Text Panel Purple}" Grid.Column="1">
+                    <TextBlock
+                        Text="Make memories &#x0a; your way"
+                        Foreground="White"
+                        FontSize="38"
+                        Margin="8,2,0,0"
+                        FontWeight="DemiBold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+                        
+                        />
 
                 </Border>
 
-                <Border Grid.Column="2" Margin="15" Background="Aqua" CornerRadius="20">
+
+                <Border Style="{StaticResource Text Panel Orange}" Grid.Column="2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+
+                        </Grid.RowDefinitions>
+                            
+                            <TextBlock Grid.Row="0"
+                        Text="Many"
+                        Foreground="White"
+                        FontSize="45"
+                        Margin="20,2,0,0"
+                        FontWeight="DemiBold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+                        
+                        />
+                        <TextBlock Grid.Row="1"
+                        Text="Adventures"
+                        Foreground="White"
+                        FontSize="45"
+                        Margin="20,2,0,0"
+                        FontWeight="DemiBold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+                        
+                        />
+                        <TextBlock Grid.Row="2"
+                        Text="Wait!"
+                        Foreground="White"
+                        FontSize="45"
+                        Margin="20,2,0,0"
+                        FontWeight="DemiBold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+                        
+                        />
+                    </Grid>
                 </Border>
 
-                <Border Grid.Column="0" Margin="15" Background="{StaticResource Color2}" CornerRadius="20">
+                <Grid Grid.Row="0" >
+
+                    <Rectangle Margin="10" RadiusX="30" RadiusY="30">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush
+                                
+                              >
+                                <GradientStop Color="{StaticResource Color1a}" Offset="0.0"/>
+                                <GradientStop Color="{StaticResource Color1b}" Offset="1"/>
+
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                    <Border>
                     <TextBlock
                         Text="Check out our&#x0a;Featured Trips"
                         Foreground="White"
                         FontSize="45"
-                        Margin="12,10,0,0"
+                        Margin="18,10,0,0"
                         FontWeight="Demibold"
                         FontFamily="Gabriola"
                         VerticalAlignment="Top" HorizontalAlignment="left" 
+                        
                         />
-                    
-                </Border>
+                    </Border>
+                </Grid>
             </Grid>
             
             <Grid Grid.Row="1">

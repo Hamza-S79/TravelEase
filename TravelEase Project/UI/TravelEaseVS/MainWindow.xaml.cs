@@ -26,7 +26,7 @@ namespace TravelEaseVS
         }
         private void SearchBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-
+            
         }
 
 

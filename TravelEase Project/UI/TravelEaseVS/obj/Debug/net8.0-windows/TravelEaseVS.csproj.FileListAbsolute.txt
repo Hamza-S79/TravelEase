@@ -27,3 +27,5 @@ C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\D
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\HomeView.baml
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\AnnouncedTripsView.g.cs
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\AnnouncedTripsView.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\TripInfo.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\TripInfo.baml
