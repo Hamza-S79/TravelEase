@@ -4,6 +4,8 @@
     <Brush x:Key="Color2">#F57753</Brush>
     <Brush x:Key="Color3">#3AF8D3</Brush>
 
+
+
     <Color x:Key="Color1a">#F57753</Color>
     <Color x:Key="Color1b">#f5a773</Color>
 

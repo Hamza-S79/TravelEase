@@ -69,7 +69,7 @@
                 <Button Style="{StaticResource NavButton}" Grid.Row="0" Content="Home" Command="{Binding HMVCommand}"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Announced Trips" Command="{Binding ATVCommand}"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Active Bookings"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Active Trips"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Active Trips" Command="{Binding TICommand}"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="4" Content="My Travel Book"/>
 
 

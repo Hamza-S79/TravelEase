@@ -4,10 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TravelEaseVS.MVVM.View"
+             xmlns:viewModel="clr-namespace:TravelEaseVS.MVVM.ViewModel"
              mc:Ignorable="d" 
              
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModel:ViewHandler/>
+    </UserControl.DataContext>
+
     <Grid>
-        <TextBlock Text="kjdesbfckejnbc" FontSize="60" VerticalAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Style="{StaticResource NavButton}" Content="Mock Trip" Command="{Binding TICommand}" />
+
+
     </Grid>
+    
+    
 </UserControl>

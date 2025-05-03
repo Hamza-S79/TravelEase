@@ -36,7 +36,8 @@ namespace TravelEaseVS.MVVM.ViewModel
         {
             hmv = new HomeViewModel();
             ATV = new AnnouncedTripsModel();
-            curr_view = hmv;
+            TRI = new TripInfo();
+            curr_view = TRI;
 
 
             HMVCommand = new RelayCommand(o =>
