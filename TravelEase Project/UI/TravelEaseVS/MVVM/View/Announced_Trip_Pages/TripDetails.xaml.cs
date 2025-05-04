@@ -13,16 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TravelEaseVS.MVVM.View
+namespace TravelEaseVS.MVVM.View.Announced_Trip_Pages
 {
     /// <summary>
-    /// Interaction logic for TripInfo.xaml
+    /// Interaction logic for TripDetails.xaml
     /// </summary>
-    public partial class TripInfo : UserControl
+    public partial class TripDetails : Page
     {
-        public TripInfo()
+        public Frame parentFrame;
+        public TripDetails(Frame pf)
         {
             InitializeComponent();
+            parentFrame = pf;
+        }
+
+        public void NavToList(object sender, RoutedEventArgs e)
+        {
+            parentFrame.GoBack();
         }
     }
 }

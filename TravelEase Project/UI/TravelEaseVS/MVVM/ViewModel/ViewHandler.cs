@@ -10,34 +10,35 @@ namespace TravelEaseVS.MVVM.ViewModel
 {
     class ViewHandler : ObserveObj
     {
-        public RelayCommand HMVCommand {  get; set; }
+        public RelayCommand HMVCommand { get; set; }
         public RelayCommand ATVCommand { get; set; }
+        public RelayCommand BKSCommand { get; set; }
 
-        public RelayCommand TICommand { get; set; }
-        public HomeViewModel hmv {get;set;}
 
-        public TripInfo TRI { get; set;}
+        public HomeViewModel hmv { get; set; }
         public AnnouncedTripsModel ATV { get; set; }
+        public Bookings BKS { get; set; }
 
         private object curr_view;
 
         public object MyView
         {
             get { return curr_view; }
-            set{
-                curr_view = value; 
-            OnPropertyChanged();
+            set
+            {
+                curr_view = value;
+                OnPropertyChanged();
             }
         }
 
 
 
-        public ViewHandler() 
+        public ViewHandler()
         {
             hmv = new HomeViewModel();
             ATV = new AnnouncedTripsModel();
-            TRI = new TripInfo();
-            curr_view = TRI;
+            BKS = new Bookings();
+            curr_view = hmv;
 
 
             HMVCommand = new RelayCommand(o =>
@@ -46,13 +47,21 @@ namespace TravelEaseVS.MVVM.ViewModel
             });
 
 
-           ATVCommand = new RelayCommand(o =>
+            ATVCommand = new RelayCommand(o =>
+             {
+                 MyView = ATV;
+             });
+
+            BKSCommand = new RelayCommand( o =>
             {
-                MyView = ATV;
+                MyView = BKS;
+            
             });
 
-            TICommand = new RelayCommand(o => { MyView = TRI; });
         }
     }
-    
+
+
+
+
 }

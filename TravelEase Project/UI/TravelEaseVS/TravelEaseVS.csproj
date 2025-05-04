@@ -10,6 +10,41 @@
 
   <ItemGroup>
     <None Remove="Fonts\Space_Mono\SpaceMono-Regular.ttf" />
+    <None Remove="Images\Bahamas.jpeg" />
+    <None Remove="Images\Bali Spa Village.jpeg" />
+    <None Remove="Images\Bali.jpeg" />
+    <None Remove="Images\Barcelona.jpeg" />
+    <None Remove="Images\Carribean Sea.jpeg" />
+    <None Remove="Images\Chiang Mai Retreat.jpeg" />
+    <None Remove="Images\dottedPathIcon.png" />
+    <None Remove="Images\Florence.jpeg" />
+    <None Remove="Images\Golden Circle.jpeg" />
+    <None Remove="Images\Grand Canyon.jpeg" />
+    <None Remove="Images\Iceland Highlands.jpeg" />
+    <None Remove="Images\Jamaica.jpeg" />
+    <None Remove="Images\Java Island.jpeg" />
+    <None Remove="Images\Key West.jpeg" />
+    <None Remove="Images\Kyoto.jpeg" />
+    <None Remove="Images\Lombok.jpeg" />
+    <None Remove="Images\Maasai Mara.jpeg" />
+    <None Remove="Images\Madrid.jpeg" />
+    <None Remove="Images\Miami Beach.jpeg" />
+    <None Remove="Images\Nara.jpeg" />
+    <None Remove="Images\Ngorongoro Crater.jpeg" />
+    <None Remove="Images\Orlando.jpeg" />
+    <None Remove="Images\Osaka.jpeg" />
+    <None Remove="Images\Phuket Wellness Center.jpeg" />
+    <None Remove="Images\Pompeii.jpeg" />
+    <None Remove="Images\Reykjavik.jpeg" />
+    <None Remove="Images\Rocky Mountains.jpeg" />
+    <None Remove="Images\Rome.jpeg" />
+    <None Remove="Images\San Sebastian.jpeg" />
+    <None Remove="Images\Serengeti.jpeg" />
+    <None Remove="Images\TravelEaseMockLogo.png" />
+    <None Remove="Images\Yosemite National Park.jpeg" />
+    <None Remove="MVVM\ViewModel\TravelEaseMockLogo.png" />
+    <None Remove="OtherWindows\TravelEaseMockLogo.png" />
+    <None Remove="TravelEaseMockLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +53,47 @@
 
   <ItemGroup>
     <Resource Include="Fonts\Space_Mono\SpaceMono-Regular.ttf" />
+    <Content Include="Images\Bahamas.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\Bali Spa Village.jpeg" />
+    <Resource Include="Images\Bali.jpeg" />
+    <Resource Include="Images\Barcelona.jpeg" />
+    <Resource Include="Images\Carribean Sea.jpeg" />
+    <Resource Include="Images\Chiang Mai Retreat.jpeg" />
+    <Content Include="Images\dottedPathIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\Florence.jpeg" />
+    <Resource Include="Images\Golden Circle.jpeg" />
+    <Resource Include="Images\Grand Canyon.jpeg" />
+    <Resource Include="Images\Iceland Highlands.jpeg" />
+    <Resource Include="Images\Jamaica.jpeg" />
+    <Resource Include="Images\Java Island.jpeg" />
+    <Resource Include="Images\Key West.jpeg" />
+    <Resource Include="Images\Kyoto.jpeg" />
+    <Resource Include="Images\Lombok.jpeg" />
+    <Resource Include="Images\Maasai Mara.jpeg" />
+    <Resource Include="Images\Madrid.jpeg" />
+    <Resource Include="Images\Miami Beach.jpeg" />
+    <Resource Include="Images\Nara.jpeg" />
+    <Resource Include="Images\Ngorongoro Crater.jpeg" />
+    <Resource Include="Images\Orlando.jpeg" />
+    <Resource Include="Images\Osaka.jpeg" />
+    <Resource Include="Images\Phuket Wellness Center.jpeg" />
+    <Resource Include="Images\Pompeii.jpeg" />
+    <Resource Include="Images\Reykjavik.jpeg" />
+    <Resource Include="Images\Rocky Mountains.jpeg" />
+    <Resource Include="Images\Rome.jpeg" />
+    <Resource Include="Images\San Sebastian.jpeg" />
+    <Resource Include="Images\Serengeti.jpeg" />
+    <Resource Include="Images\TravelEaseMockLogo.png" />
+    <Content Include="Images\Yosemite National Park.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="MVVM\ViewModel\TravelEaseMockLogo.png" />
+    <Resource Include="OtherWindows\TravelEaseMockLogo.png" />
+    <Resource Include="TravelEaseMockLogo.png" />
   </ItemGroup>
 
 </Project>

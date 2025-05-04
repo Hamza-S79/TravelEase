@@ -8,20 +8,16 @@
              mc:Ignorable="d" 
              
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.DataContext>
-        <viewModel:ViewHandler/>
-    </UserControl.DataContext>
+
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Button Style="{StaticResource NavButton}" Content="Mock Trip" Command="{Binding TICommand}" />
+        <Frame  x:Name="Announced_Trips"
+                NavigationUIVisibility="Hidden"/>
+
 
 
     </Grid>
-    
-    
+
+
+
 </UserControl>

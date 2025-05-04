@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TravelEaseVS.MVVM.View.Announced_Trip_Pages;
+using TravelEaseVS.MVVM.ViewModel;
 namespace TravelEaseVS.MVVM.View
 {
     /// <summary>
@@ -20,9 +21,15 @@ namespace TravelEaseVS.MVVM.View
     /// </summary>
     public partial class AnnouncedTripsView : UserControl
     {
+        
         public AnnouncedTripsView()
         {
             InitializeComponent();
+            Announced_Trips.Navigate(new TripsList(this.Announced_Trips));
+                
+
         }
+
+
     }
 }

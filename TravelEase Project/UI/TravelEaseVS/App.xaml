@@ -21,9 +21,10 @@
                 <view:AnnouncedTripsView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:TripInfo}">
-                <view:TripInfo/>
+            <DataTemplate DataType="{x:Type viewModel:Bookings}">
+                <view:Bookings/>
             </DataTemplate>
+
 
         </ResourceDictionary>
     </Application.Resources>

@@ -10,10 +10,19 @@
     <Compile Update="MVVM\View\AnnouncedTripsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\HomeView.xaml.cs">
+    <Compile Update="MVVM\View\Announced_Trip_Pages\TripDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\TripInfo.xaml.cs">
+    <Compile Update="MVVM\View\Announced_Trip_Pages\TripsList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\Bookings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\Bookings_Pages\Bookings_List.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\HomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -24,10 +33,19 @@
     <Page Update="MVVM\View\AnnouncedTripsView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\HomeView.xaml">
+    <Page Update="MVVM\View\Announced_Trip_Pages\TripDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\TripInfo.xaml">
+    <Page Update="MVVM\View\Announced_Trip_Pages\TripsList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Bookings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Bookings_Pages\Bookings_List.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\HomeView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Colors.xaml">

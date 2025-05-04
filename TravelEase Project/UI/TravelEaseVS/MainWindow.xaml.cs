@@ -8,7 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TravelEaseVS.MVVM;
+using TravelEaseVS.MVVM.ViewModel;
 namespace TravelEaseVS
 {
     /// <summary>
@@ -19,7 +20,7 @@ namespace TravelEaseVS
         public MainWindow()
         {
             InitializeComponent();
-
+            
 
 
 

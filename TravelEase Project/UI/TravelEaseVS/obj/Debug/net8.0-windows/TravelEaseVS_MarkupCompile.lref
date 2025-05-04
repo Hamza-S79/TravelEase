@@ -2,11 +2,14 @@
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\App.xaml;;
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MainWindow.xaml;;
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\AnnouncedTripsView.xaml;;
+FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\Announced_Trip_Pages\TripDetails.xaml;;
+FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\Announced_Trip_Pages\TripsList.xaml;;
+FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\Bookings.xaml;;
+FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\Bookings_Pages\Bookings_List.xaml;;
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\HomeView.xaml;;
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\HotelForm.xaml;;
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\OperatorForm.xaml;;
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\TravelerForm.xaml;;
-FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\MVVM\View\TripInfo.xaml;;
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\OtherWindows\login.xaml;;
 FC:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\OtherWindows\signup.xaml;;
 

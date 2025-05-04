@@ -14,7 +14,9 @@
         <viewModel:ViewHandler/>
     </Window.DataContext>
 
-    <Border>
+   
+
+        <Border>
         <Grid Background="Transparent"><!--Main Grid-->
             
             <Grid.ColumnDefinitions>
@@ -64,18 +66,52 @@
 
                 </Grid.RowDefinitions>
 
-               
+                
 
                 <Button Style="{StaticResource NavButton}" Grid.Row="0" Content="Home" Command="{Binding HMVCommand}"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Announced Trips" Command="{Binding ATVCommand}"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Active Bookings"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Active Trips" Command="{Binding TICommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Active Bookings" Command="{Binding BKSCommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Active Trips" Command="{Binding ATVCommand}"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="4" Content="My Travel Book"/>
 
 
 
 
 
+            </Grid>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Height="50" Width="50"
+                        >
+
+                    <Button.Template>
+                        
+
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                 CornerRadius="50"
+                                  Height="{TemplateBinding Height}"
+                                   Width="{TemplateBinding Width}"
+                                Background="Gray"   
+                                
+                                >
+                                <Border CornerRadius="50">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Images/TravelEaseMockLogo.png"/>
+                                    </Border.Background>
+                                </Border>
+                            </Border>
+                                
+                        </ControlTemplate>
+                        
+                    </Button.Template>
+                </Button>
             </Grid>
 
             <Grid Grid.Row="0" Grid.Column="1" >
@@ -124,6 +160,7 @@
             <ContentControl Grid.Column="1" Grid.Row="1"
                             Margin="10"
                             Content="{Binding MyView}"
+                            
                             />
 
 

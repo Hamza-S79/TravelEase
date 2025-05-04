@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\App.xaml
-11-630584843
-
-19-1679239758
+14623438114
+3-1545692818
+22-1917052552
 198-294894759
-MainWindow.xaml;MVVM\View\AnnouncedTripsView.xaml;MVVM\View\HomeView.xaml;MVVM\View\HotelForm.xaml;MVVM\View\OperatorForm.xaml;MVVM\View\TravelerForm.xaml;MVVM\View\TripInfo.xaml;OtherWindows\login.xaml;OtherWindows\signup.xaml;Styles\Colors.xaml;Styles\Theme.xaml;
+MainWindow.xaml;MVVM\View\AnnouncedTripsView.xaml;MVVM\View\Announced_Trip_Pages\TripDetails.xaml;MVVM\View\Announced_Trip_Pages\TripsList.xaml;MVVM\View\Bookings.xaml;MVVM\View\Bookings_Pages\Bookings_List.xaml;MVVM\View\HomeView.xaml;MVVM\View\HotelForm.xaml;MVVM\View\OperatorForm.xaml;MVVM\View\TravelerForm.xaml;OtherWindows\login.xaml;OtherWindows\signup.xaml;Styles\Colors.xaml;Styles\Theme.xaml;
 
 False
 
