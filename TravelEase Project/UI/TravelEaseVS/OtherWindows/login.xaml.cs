@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
+using System.Data.SqlClient;
+
 
 namespace TravelEaseVS.OtherWindows
 {
@@ -19,6 +22,7 @@ namespace TravelEaseVS.OtherWindows
     /// </summary>
     public partial class login : Window
     {
+        private string _selectedUserRole = ""; // To store the selected role
         public login()
         {
             InitializeComponent();
@@ -51,19 +55,114 @@ namespace TravelEaseVS.OtherWindows
         {
             string id = IdTextBox.Text;
             string password = PasswordBox.Password;
+            password = ComputeSha256Hash(password);
 
-            if (id == "admin" && password == "123")
+            try
             {
+                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-OPQ91FU\\SQLEXPRESS; Initial Catalog = TravelEase; Integrated Security=True");
 
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
+                using (conn)
+                {
+                    conn.Open();
+                    //Todo: Implement the interface logic for each case
+                    SqlCommand verifycmd;
+                    switch (_selectedUserRole)
+                    {
+                        case "Admin":
+                            if (id == "admin" && password == ComputeSha256Hash("123"))
+                            {
+
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
+
+                            }
+                            else
+                            {
+                                // Login failed, show error text
+                                ErrorTextBlock.Visibility = Visibility.Visible;
+                            }
+
+                            break;
+
+                        case "Traveler":
+
+                            verifycmd = new SqlCommand("SELECT count(user_id) FROM App_User WHERE user_id =  @USER AND password=@PASS", conn);
+                            verifycmd.Parameters.AddWithValue("@USER", id);
+                            verifycmd.Parameters.AddWithValue("@PASS", password);
+                            if ((int)verifycmd.ExecuteScalar() == 1)
+                            {
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                ErrorTextBlock.Visibility = Visibility.Visible;
+                            }
+
+                            break;
+
+                        case "Trip Operator":
+                            verifycmd = new SqlCommand("SELECT count(operator_id) FROM Trip_Operator WHERE operator_id =  @OP AND password = @PASS", conn);
+                            verifycmd.Parameters.AddWithValue("@OP", id);
+                            verifycmd.Parameters.AddWithValue("@PASS", password);
+                            if ((int)verifycmd.ExecuteScalar() == 1)
+                            {
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                ErrorTextBlock.Visibility = Visibility.Visible;
+                            }
+                            break;
+
+                        case "Service Provider":
+                            verifycmd = new SqlCommand("SELECT count(hotel_id) FROM Hotel_Provider WHERE hotel_id =  @USER AND password = @PASS", conn);
+                            verifycmd.Parameters.AddWithValue("@USER", id);
+                            verifycmd.Parameters.AddWithValue("@PASS", password);
+                            if ((int)verifycmd.ExecuteScalar() == 1)
+                            {
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                ErrorTextBlock.Visibility = Visibility.Visible;
+                            }
+                           
+                            break;
+                        default:
+                            break;
+                    }
+                    conn.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Database Error", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
-            else
+        }
+
+        public static string ComputeSha256Hash(string rawData)
+        {
+            // Create a SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
             {
-                // Login failed, show error text
-                ErrorTextBlock.Visibility = Visibility.Visible;
+                //calculating the hash
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convert byte array to a string   
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2")); // format as hex
+                }
+                return builder.ToString();
             }
         }
 
@@ -72,7 +171,6 @@ namespace TravelEaseVS.OtherWindows
 
         }
 
-        private string _selectedUserRole; // To store the selected role
 
         private void UserTypeRadioButton_Checked(object sender, RoutedEventArgs e)
         {

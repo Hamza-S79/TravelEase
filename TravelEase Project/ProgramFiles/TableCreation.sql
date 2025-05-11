@@ -325,6 +325,7 @@ SELECT * FROM Transport_Route
 -- 15. Hotel Provider
 CREATE TABLE Hotel_Provider (
     hotel_id INT PRIMARY KEY,
+	password VARCHAR(100), 
     name VARCHAR(100),
     email VARCHAR(100),
     contact_no VARCHAR(20),
@@ -335,7 +336,7 @@ CREATE TABLE Hotel_Provider (
 
 
 Bulk insert Hotel_Provider
-from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Hotel_Provider.csv'
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Hotel_Provider.csv'
 with
 (
 FORMAT = 'csv',
@@ -360,7 +361,7 @@ CREATE TABLE Room (
 );
 
 Bulk insert Room
-from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Room.csv'
+from 'E:\semester4\DB\project\TravelEase\TravelEase Project\Data\Room.csv'
 with
 (
 FORMAT = 'csv',
@@ -422,7 +423,7 @@ CREATE TABLE Stay (
     FOREIGN KEY (announced_trip_id) REFERENCES Announced_Trip(announced_trip_id),
     FOREIGN KEY (hotel_id) REFERENCES Hotel_Provider(hotel_id)
 );
-
+drop table Stay
 Bulk insert Stay
 from 'C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\Data\Stay.csv'
 with
@@ -560,3 +561,10 @@ VALUES (
 UPDATE Trip_Operator
 SET password = CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', password), 2)
 WHERE ISNUMERIC(password) = 0; -- Assuming raw passwords aren't hashed yet
+
+select * from Trip_Operator
+select * from Hotel_Provider
+
+
+SELECT user_id FROM App_User WHERE user_id =  104
+select * from App_User
