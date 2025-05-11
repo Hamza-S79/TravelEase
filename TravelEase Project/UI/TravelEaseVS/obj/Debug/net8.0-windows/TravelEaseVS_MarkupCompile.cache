@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\
+E:\semester4\DB\project\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\
 TravelEaseVS
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\App.xaml
+E:\semester4\DB\project\TravelEase\TravelEase Project\UI\TravelEaseVS\App.xaml
 14623438114
 3-1545692818
 22-1917052552
-198-294894759
+1991485615497
 MainWindow.xaml;MVVM\View\AnnouncedTripsView.xaml;MVVM\View\Announced_Trip_Pages\TripDetails.xaml;MVVM\View\Announced_Trip_Pages\TripsList.xaml;MVVM\View\Bookings.xaml;MVVM\View\Bookings_Pages\Bookings_List.xaml;MVVM\View\HomeView.xaml;MVVM\View\HotelForm.xaml;MVVM\View\OperatorForm.xaml;MVVM\View\TravelerForm.xaml;OtherWindows\login.xaml;OtherWindows\signup.xaml;Styles\Colors.xaml;Styles\Theme.xaml;
 
 False

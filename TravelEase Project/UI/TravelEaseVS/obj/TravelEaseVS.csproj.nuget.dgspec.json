@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj": {}
+    "E:\\semester4\\DB\\project\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj": {
+    "E:\\semester4\\DB\\project\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
+        "projectUniqueName": "E:\\semester4\\DB\\project\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
         "projectName": "TravelEaseVS",
-        "projectPath": "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
-        "packagesPath": "C:\\Users\\Hamza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\obj\\",
+        "projectPath": "E:\\semester4\\DB\\project\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
+        "packagesPath": "C:\\Users\\Muhammad Nasir\\.nuget\\packages\\",
+        "outputPath": "E:\\semester4\\DB\\project\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hamza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammad Nasir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +35,46 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "System.Reflection.Emit": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Metadata": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "runtime.native.System.Data.SqlClient.sni": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +94,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

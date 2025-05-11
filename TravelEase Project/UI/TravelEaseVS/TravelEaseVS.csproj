@@ -91,6 +91,13 @@
     <Content Include="Images\Yosemite National Park.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
+    <PackageReference Include="runtime.win-arm64.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win-x64.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win-x86.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.Metadata" Version="1.6.0" />
     <Resource Include="MVVM\ViewModel\TravelEaseMockLogo.png" />
     <Resource Include="OtherWindows\TravelEaseMockLogo.png" />
     <Resource Include="TravelEaseMockLogo.png" />

@@ -537,3 +537,26 @@ SELECT * FROM Hotel_Provider;
 SELECT * FROM Room;
 SELECT * FROM Activity_Provider;
 SELECT * FROM Tour_Guide;
+
+SELECT * FROM Trip_Operator;
+-- backend starts here
+
+
+DECLARE @next_operator_id INT
+SELECT @next_operator_id = MAX(operator_id) + 1
+FROM Trip_Operator;
+
+INSERT INTO Trip_Operator (operator_id, password, email, joined_date, rating)
+VALUES (
+    @next_operator_id,
+    CONVERT(VARCHAR(64),'123', 2),
+    'john@example.com',
+    GETDATE(),
+    4.5
+);
+
+-- converting all the exsiting passwords in sha 256
+
+UPDATE Trip_Operator
+SET password = CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', password), 2)
+WHERE ISNUMERIC(password) = 0; -- Assuming raw passwords aren't hashed yet

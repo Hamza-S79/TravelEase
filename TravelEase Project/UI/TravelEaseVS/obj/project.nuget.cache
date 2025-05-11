@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "I3GYRHkPxBMpjL2s9Dou6a4OvlfkbsgrobG9TVEycAQeoxnIUR4MyLJHRhnQl62N+tWaL0QARhVoZDAFBr0pYg==",
+  "dgSpecHash": "zL4NrDYBloc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "E:\\semester4\\DB\\project\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Muhammad Nasir\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Muhammad Nasir\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Muhammad Nasir\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Muhammad Nasir\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Muhammad Nasir\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512",
+    "C:\\Users\\Muhammad Nasir\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\Muhammad Nasir\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }
