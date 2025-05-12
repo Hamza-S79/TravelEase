@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj": {}
+    "C:\\Users\\Hamza\\Desktop\\Tools\\TVE2\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj": {
+    "C:\\Users\\Hamza\\Desktop\\Tools\\TVE2\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
+        "projectUniqueName": "C:\\Users\\Hamza\\Desktop\\Tools\\TVE2\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
         "projectName": "TravelEaseVS",
-        "projectPath": "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
+        "projectPath": "C:\\Users\\Hamza\\Desktop\\Tools\\TVE2\\TravelEase Project\\UI\\TravelEaseVS\\TravelEaseVS.csproj",
         "packagesPath": "C:\\Users\\Hamza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hamza\\Desktop\\Tools\\TravelEase\\TravelEase Project\\UI\\TravelEaseVS\\obj\\",
+        "outputPath": "C:\\Users\\Hamza\\Desktop\\Tools\\TVE2\\TravelEase Project\\UI\\TravelEaseVS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

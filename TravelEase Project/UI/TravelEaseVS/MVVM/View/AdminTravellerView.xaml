@@ -1,20 +1,23 @@
-﻿<UserControl x:Class="TravelEaseVS.MVVM.View.AdminHomeView"
+﻿<UserControl x:Class="TravelEaseVS.MVVM.View.AdminTravellerView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TravelEaseVS.MVVM.View"
-             xmlns:viewModel ="clr-namespace:TravelEaseVS.MVVM.ViewModel"
-             
+             xmlns:viewModel="clr-namespace:TravelEaseVS.MVVM.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.DataContext>
-        <viewModel:AdminHomeViewModel/>
+        <viewModel:AdminTravellerModel/>
     </UserControl.DataContext>
+
 
     <Grid>
 
-        <Border Background="Goldenrod"/>
-    </Grid>
+        <Frame  Grid.Row="1"
+                x:Name="Travellers"
+                NavigationUIVisibility="Hidden"/>
 
+
+    </Grid>
 </UserControl>

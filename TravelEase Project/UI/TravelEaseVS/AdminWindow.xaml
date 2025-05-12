@@ -13,7 +13,9 @@
         Title="TravelEase Admin" Height="740" Width="1300">
 
 
-
+    <Window.DataContext>
+        <viewModel:AdminViewHandler/>
+    </Window.DataContext>
 
 
     <Border>
@@ -69,10 +71,10 @@
 
 
 
-                <Button Style="{StaticResource NavButton}" Grid.Row="0" Content="Home" Command="{Binding HMVCommand}"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Travelers" Command="{Binding ATVCommand}"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Operators" Command="{Binding BKSCommand}"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Hotels" Command="{Binding ATVCommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="0" Content="Home" Command="{Binding AHMVcommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Travelers" Command="{Binding ATcommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Operators" Command="{Binding AOcommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Hotels" Command="{Binding APcommand}"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="4" Content="Activities"/>
 
 

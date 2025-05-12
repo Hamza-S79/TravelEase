@@ -37,6 +37,25 @@
             <DataTemplate DataType="{x:Type viewModel:OpAnnouncedTripsModel}">
                 <view:OpAnnouncedTripsView/>
             </DataTemplate>
+            
+            <!-- ADMIN VIEW MODELS CONNECTED WITH ADMIN VIEWS-->
+            <DataTemplate DataType="{x:Type viewModel:AdminHomeViewModel}">
+                <view:AdminHomeView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:AdminTravellerModel}">
+                <view:AdminTravellerView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AdminOperatorModel}">
+                <view:AdminOperatorView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AdminProviderModel}">
+                <view:AdminProviderView/>
+            </DataTemplate>
+
+
 
 
         </ResourceDictionary>

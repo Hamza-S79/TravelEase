@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\
+C:\Users\Hamza\Desktop\Tools\TVE2\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\
 TravelEaseVS
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\App.xaml
-20-1041641276
+C:\Users\Hamza\Desktop\Tools\TVE2\TravelEase Project\UI\TravelEaseVS\App.xaml
+291472768727
 5-1413820990
-34-2093602799
+46-1928275413
 200-1155144355
-AdminWindow.xaml;MainWindow.xaml;MVVM\View\AdminHomeView.xaml;MVVM\View\AnnouncedTripsView.xaml;MVVM\View\Announced_Trip_Pages\TripDetails.xaml;MVVM\View\Announced_Trip_Pages\TripsList.xaml;MVVM\View\Bookings.xaml;MVVM\View\Bookings_Pages\Bookings_List.xaml;MVVM\View\HomeView.xaml;MVVM\View\HotelForm.xaml;MVVM\View\OpAnnouncedTripsView.xaml;MVVM\View\OperatorForm.xaml;MVVM\View\OpHomeView.xaml;MVVM\View\TravelerForm.xaml;OpMainWindow.xaml;OtherWindows\login.xaml;OtherWindows\signup.xaml;ProviderMainWindow.xaml;Styles\Colors.xaml;Styles\Theme.xaml;
+AdminWindow.xaml;MainWindow.xaml;MVVM\View\AdminHomeView.xaml;MVVM\View\AdminOperatorView.xaml;MVVM\View\AdminProviderView.xaml;MVVM\View\AdminTravellerView.xaml;MVVM\View\Admin_Pages\OperatorInfo.xaml;MVVM\View\Admin_Pages\OperatorList.xaml;MVVM\View\Admin_Pages\ProviderInfo.xaml;MVVM\View\Admin_Pages\ProviderList.xaml;MVVM\View\Admin_Pages\TravellerInfo.xaml;MVVM\View\Admin_Pages\TravellerList.xaml;MVVM\View\AnnouncedTripsView.xaml;MVVM\View\Announced_Trip_Pages\TripDetails.xaml;MVVM\View\Announced_Trip_Pages\TripsList.xaml;MVVM\View\Bookings.xaml;MVVM\View\Bookings_Pages\Bookings_List.xaml;MVVM\View\HomeView.xaml;MVVM\View\HotelForm.xaml;MVVM\View\OpAnnouncedTripsView.xaml;MVVM\View\OperatorForm.xaml;MVVM\View\OpHomeView.xaml;MVVM\View\TravelerForm.xaml;OpMainWindow.xaml;OtherWindows\login.xaml;OtherWindows\signup.xaml;ProviderMainWindow.xaml;Styles\Colors.xaml;Styles\Theme.xaml;
 
 False
 
