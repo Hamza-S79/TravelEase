@@ -9,10 +9,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
 using System.Data.SqlClient;
+
 
 namespace TravelEaseVS.OtherWindows
 {
@@ -21,8 +22,7 @@ namespace TravelEaseVS.OtherWindows
     /// </summary>
     public partial class login : Window
     {
-        private int _usertype = 1; //1 for Traveler, 2 for Admin,  3 for Operator, 4 for Provider
-        public int userType { get { return _usertype; } set { _usertype = value; } }
+        private string _selectedUserRole = ""; // To store the selected role
         public login()
         {
             InitializeComponent();
@@ -53,78 +53,117 @@ namespace TravelEaseVS.OtherWindows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string email = IdTextBox.Text;
+            string id = IdTextBox.Text;
             string password = PasswordBox.Password;
+            password = ComputeSha256Hash(password);
 
-            SqlConnection conn = new SqlConnection("Data Source=HP\\SQLEXPRESS01;Initial Catalog=TravelEase;Integrated Security=True;");
-            conn.Open();
-            SqlCommand com;
-            SqlDataReader reader;
-            switch (userType)
+            try
             {
-                case 1:
-                    com = new SqlCommand("exec UserAuth \'" + email + "\',\'" + password + "\'", conn);
-                    reader = com.ExecuteReader();
+                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-OPQ91FU\\SQLEXPRESS; Initial Catalog = TravelEase; Integrated Security=True");
 
-                    if (reader.HasRows)
+                using (conn)
+                {
+                    conn.Open();
+                    //Todo: Implement the interface logic for each case
+                    SqlCommand verifycmd;
+                    switch (_selectedUserRole)
                     {
-                        reader.Read();
-                        MainWindow mainWindow = new MainWindow(Convert.ToInt32(reader[0]));
-                        mainWindow.Show();
-                        this.Close();
+                        case "Admin":
+                            if (id == "admin" && password == ComputeSha256Hash("123"))
+                            {
 
-                    }
-                    else
-                    {
-                        // Login failed, show error text
-                        ErrorTextBlock.Visibility = Visibility.Visible;
-                    }
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
 
-                    break;
+                            }
+                            else
+                            {
+                                // Login failed, show error text
+                                ErrorTextBlock.Visibility = Visibility.Visible;
+                            }
 
-                case 2:
-                    if (email == "admin" && password == "123")
-                    {
-                        AdminWindow adminWindow = new AdminWindow();
-                        adminWindow.Show();
-                        this.Close();
+                            break;
+
+                        case "Traveler":
+
+                            verifycmd = new SqlCommand("SELECT count(user_id) FROM App_User WHERE user_id =  @USER AND password=@PASS", conn);
+                            verifycmd.Parameters.AddWithValue("@USER", id);
+                            verifycmd.Parameters.AddWithValue("@PASS", password);
+                            if ((int)verifycmd.ExecuteScalar() == 1)
+                            {
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                ErrorTextBlock.Visibility = Visibility.Visible;
+                            }
+
+                            break;
+
+                        case "Trip Operator":
+                            verifycmd = new SqlCommand("SELECT count(operator_id) FROM Trip_Operator WHERE operator_id =  @OP AND password = @PASS", conn);
+                            verifycmd.Parameters.AddWithValue("@OP", id);
+                            verifycmd.Parameters.AddWithValue("@PASS", password);
+                            if ((int)verifycmd.ExecuteScalar() == 1)
+                            {
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                ErrorTextBlock.Visibility = Visibility.Visible;
+                            }
+                            break;
+
+                        case "Service Provider":
+                            verifycmd = new SqlCommand("SELECT count(hotel_id) FROM Hotel_Provider WHERE hotel_id =  @USER AND password = @PASS", conn);
+                            verifycmd.Parameters.AddWithValue("@USER", id);
+                            verifycmd.Parameters.AddWithValue("@PASS", password);
+                            if ((int)verifycmd.ExecuteScalar() == 1)
+                            {
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                ErrorTextBlock.Visibility = Visibility.Visible;
+                            }
+                           
+                            break;
+                        default:
+                            break;
                     }
-                    else
-                    {
-                        // Login failed, show error text
-                        ErrorTextBlock.Visibility = Visibility.Visible;
-                    }
-                break;                
-                case 3:
-                    if (email == "saleem" && password == "123")
-                    {
-                        OpMainWindow OpWindow = new OpMainWindow();
-                        OpWindow.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        // Login failed, show error text
-                        ErrorTextBlock.Visibility = Visibility.Visible;
-                    }
-                break;                
-                case 4:
-                    if (email == "nasir" && password == "123")
-                    {
-                        ProviderMainWindow pw = new ProviderMainWindow();
-                        pw.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        // Login failed, show error text
-                        ErrorTextBlock.Visibility = Visibility.Visible;
-                    }
-                break;
+                    conn.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Database Error", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
+        }
 
-            conn.Close();
+        public static string ComputeSha256Hash(string rawData)
+        {
+            // Create a SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                //calculating the hash
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convert byte array to a string   
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2")); // format as hex
+                }
+                return builder.ToString();
+            }
         }
 
         private void IdTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -132,15 +171,13 @@ namespace TravelEaseVS.OtherWindows
 
         }
 
-        private string _selectedUserRole; // To store the selected role
 
         private void UserTypeRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             if (sender is RadioButton radioButton && radioButton.IsChecked == true)
             {
                 _selectedUserRole = radioButton.Tag.ToString();
-
-                userType = _selectedUserRole[0] - 48;
+                Console.WriteLine($"Selected Role: {_selectedUserRole}");
                 // Now you can use the '_selectedUserRole' variable
                 // to adjust your login form or logic as needed.
             }
