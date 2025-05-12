@@ -49,3 +49,26 @@ C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\D
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\TravelEaseVS_Content.g.cs
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\Images\Bahamas.jpeg
 C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\Images\Yosemite National Park.jpeg
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\AdminWindow.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\AdminWindow.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\AdminHomeView.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\OpMainWindow.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\ProviderMainWindow.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\AdminHomeView.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\OpMainWindow.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\ProviderMainWindow.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\Images\ExitIcon.png
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\Images\Arrow.png
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\TravelEaseVS.csproj.AssemblyReference.cache
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\TravelEa.6FF8FA84.Up2Date
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\OpHomeView.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\OpHomeView.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\OpAnnouncedTripsView.g.cs
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\obj\Debug\net8.0-windows\MVVM\View\OpAnnouncedTripsView.baml
+C:\Users\Hamza\Desktop\Tools\TravelEase\TravelEase Project\UI\TravelEaseVS\bin\Debug\net8.0-windows\Microsoft.ReportViewer.WinForms.dll

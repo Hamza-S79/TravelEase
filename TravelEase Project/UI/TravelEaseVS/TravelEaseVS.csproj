@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Fonts\Space_Mono\SpaceMono-Regular.ttf" />
+    <None Remove="Images\Arrow.png" />
     <None Remove="Images\Bahamas.jpeg" />
     <None Remove="Images\Bali Spa Village.jpeg" />
     <None Remove="Images\Bali.jpeg" />
@@ -17,6 +18,7 @@
     <None Remove="Images\Carribean Sea.jpeg" />
     <None Remove="Images\Chiang Mai Retreat.jpeg" />
     <None Remove="Images\dottedPathIcon.png" />
+    <None Remove="Images\ExitIcon.png" />
     <None Remove="Images\Florence.jpeg" />
     <None Remove="Images\Golden Circle.jpeg" />
     <None Remove="Images\Grand Canyon.jpeg" />
@@ -53,7 +55,13 @@
 
   <ItemGroup>
     <Resource Include="Fonts\Space_Mono\SpaceMono-Regular.ttf" />
+    <Content Include="Images\Arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Bahamas.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ExitIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Images\Bali Spa Village.jpeg" />
@@ -91,6 +99,12 @@
     <Content Include="Images\Yosemite National Park.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <PackageReference Include="Microsoft.ReportViewer.WinForms" Version="10.0.40219.1" />
+    <PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
+    <PackageReference Include="runtime.win-arm64.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win-x64.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win-x86.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
     <Resource Include="MVVM\ViewModel\TravelEaseMockLogo.png" />
     <Resource Include="OtherWindows\TravelEaseMockLogo.png" />
     <Resource Include="TravelEaseMockLogo.png" />

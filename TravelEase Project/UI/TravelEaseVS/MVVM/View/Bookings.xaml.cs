@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TravelEaseVS.MVVM.ViewModel;
 namespace TravelEaseVS.MVVM.View
 {
     /// <summary>
@@ -23,10 +23,12 @@ namespace TravelEaseVS.MVVM.View
 
 
     public partial class Bookings : UserControl
-    {
+    {   //public BookingsModel bm { get; set; }
         public Bookings()
         {
+            //bm = new BookingsModel(id);
             InitializeComponent();
+            //DataContext = bm;
             Bookings_.Navigate(new Bookings_Pages.Bookings_List(Bookings_));
         }
     }

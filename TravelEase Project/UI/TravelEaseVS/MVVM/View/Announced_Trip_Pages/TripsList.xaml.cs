@@ -22,11 +22,13 @@ namespace TravelEaseVS.MVVM.View.Announced_Trip_Pages
     /// </summary>
     /// 
 
+
     public partial class TripsList : Page 
     {
         public Frame parentFrame;
-        
-
+        int selected_id = 0;
+        string search_st = "";
+        RelayCommand nav;
         
         public TripsList(Frame pF)
         {
@@ -35,9 +37,40 @@ namespace TravelEaseVS.MVVM.View.Announced_Trip_Pages
         }
 
 
-        private void NavToTripDetail(object sender, RoutedEventArgs e)
+        public void NavToTripDetail(object sender, RoutedEventArgs e)
         {
-            parentFrame.Navigate(new TripDetails(parentFrame));
+            Button sen = sender as Button;
+
+            
+            selected_id = (int)sen.Tag;
+
+            parentFrame.Navigate(new TripDetails(parentFrame,selected_id));
+        }
+
+        private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            // Clear the text when user clicks on the textbox
+            if (SearchBox.Text == "Search...")
+            {
+                SearchBox.Text = string.Empty;
+                SearchBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Black); // Change text color to black when typing
+            }
+        }
+
+        // Event handler for LostFocus
+        private void SearchBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            // Revert to placeholder if the textbox is empty
+            if (string.IsNullOrEmpty(SearchBox.Text))
+            {
+                SearchBox.Text = "Search...";
+                SearchBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Gray); // Placeholder color
+            }
+        }
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

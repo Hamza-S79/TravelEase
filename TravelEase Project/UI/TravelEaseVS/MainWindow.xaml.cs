@@ -8,8 +8,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TravelEaseVS.MVVM;
+//using TravelEaseVS.MVVM;
 using TravelEaseVS.MVVM.ViewModel;
+using TravelEaseVS.OtherWindows;
 namespace TravelEaseVS
 {
     /// <summary>
@@ -17,19 +18,33 @@ namespace TravelEaseVS
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private int _uidd;
+//        public ViewHandler _vh;
+        public string test = "";
+//        public ViewHandler vh { get { return _vh; }  set { _vh = value; } }
+        public int uid { get { return _uidd; } set { _uidd = value; } }
+        public MainWindow(int _uid)
         {
+            uid = _uid;
             InitializeComponent();
+            //          vh = new ViewHandler(uid);
+            //          DataContext = vh;
+
             
-
-
 
         }
         private void SearchBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            
+           
         }
+        private void Go_to_login(object sender, RoutedEventArgs e)
+        {
+            login lw = new login();
+            lw.Show();
 
+            // Optional: Close or hide current window if needed
+            Window.GetWindow(this)?.Close();
+        }
 
 
 
@@ -52,6 +67,12 @@ namespace TravelEaseVS
                 SearchBox.Text = "Search...";
                 SearchBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Gray); // Placeholder color
             }
+        }
+
+
+        public void ATV(object sender, RoutedEventArgs e)
+        {
+            //vh.MyView = vh.BKSCommand;
         }
 
     }

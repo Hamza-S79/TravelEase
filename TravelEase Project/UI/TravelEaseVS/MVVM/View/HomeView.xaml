@@ -4,10 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TravelEaseVS.MVVM.View"
+             xmlns:viewModel="clr-namespace:TravelEaseVS.MVVM.ViewModel"
+             
              mc:Ignorable="d" Background="Linen"
              d:DesignHeight="450" d:DesignWidth="800">
-   
-        <ScrollViewer VerticalScrollBarVisibility="Auto"
+
+    <UserControl.DataContext>
+        <viewModel:HomeViewModel/>
+    </UserControl.DataContext>
+
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
                       PanningRatio="0.00001"
                       PanningDeceleration="2000"
                       >
@@ -18,12 +25,12 @@
             </Style>
         </ScrollViewer.Resources>
             
-        <Grid Height="900">
+        <Grid Height="700" Margin="0,0,0,20">
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height ="1*"/>
+                <RowDefinition Height ="5*"/>
+                <RowDefinition Height ="5*"/>
 
 
             </Grid.RowDefinitions>
@@ -35,23 +42,53 @@
                     <ColumnDefinition/>
 
                 </Grid.ColumnDefinitions>
+                
+                
+                <Border Style="{StaticResource Text Panel Green}" Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
 
-                <Border Style="{StaticResource Text Panel Purple}" Grid.Column="1">
-                    <TextBlock
-                        Text="Make memories &#x0a; your way"
+
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0"
+                        Text="Memories"
                         Foreground="White"
-                        FontSize="38"
-                        Margin="8,2,0,0"
+                        FontSize="45"
+                        Margin="20,2,0,0"
+                        FontWeight="DemiBold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+    
+                        />
+                        <TextBlock Grid.Row="1"
+                        Text="made"
+                        Foreground="White"
+                        FontSize="45"
+                        Margin="20,2,0,0"
                         FontWeight="DemiBold"
                         FontFamily="Gabriola"
                         VerticalAlignment="Top" HorizontalAlignment="left" 
                         
                         />
-
+                        <TextBlock Grid.Row="2"
+                        Text="your way"
+                        Foreground="White"
+                        FontSize="45"
+                        Margin="20,2,0,0"
+                        FontWeight="DemiBold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+    
+                        />
+                    </Grid>
                 </Border>
 
 
-                <Border Style="{StaticResource Text Panel Orange}" Grid.Column="2">
+                <Border Style="{StaticResource Text Panel Blue}" Grid.Column="2">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -61,7 +98,7 @@
 
                         </Grid.RowDefinitions>
                             
-                            <TextBlock Grid.Row="0"
+                        <TextBlock Grid.Row="0"
                         Text="Many"
                         Foreground="White"
                         FontSize="45"
@@ -94,33 +131,48 @@
                     </Grid>
                 </Border>
 
-                <Grid Grid.Row="0" >
+                <Border Style="{StaticResource Text Panel Orange}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
 
-                    <Rectangle Margin="10" RadiusX="30" RadiusY="30">
-                        <Rectangle.Fill>
-                            <LinearGradientBrush
-                                
-                              >
-                                <GradientStop Color="{StaticResource Color1a}" Offset="0.0"/>
-                                <GradientStop Color="{StaticResource Color1b}" Offset="1"/>
 
-                            </LinearGradientBrush>
-                        </Rectangle.Fill>
-                    </Rectangle>
+                        </Grid.RowDefinitions>
 
-                    <Border>
-                    <TextBlock
-                        Text="Check out our&#x0a;Featured Trips"
+                        <TextBlock Grid.Row="0"
+                        Text="Try Our"
                         Foreground="White"
                         FontSize="45"
-                        Margin="18,10,0,0"
-                        FontWeight="Demibold"
+                        Margin="20,2,0,0"
+                        FontWeight="DemiBold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+    
+                        />
+                        <TextBlock Grid.Row="1"
+                        Text="Featured"
+                        Foreground="White"
+                        FontSize="45"
+                        Margin="20,2,0,0"
+                        FontWeight="DemiBold"
                         FontFamily="Gabriola"
                         VerticalAlignment="Top" HorizontalAlignment="left" 
                         
                         />
-                    </Border>
-                </Grid>
+                        <TextBlock Grid.Row="2"
+                        Text="Trips"
+                        Foreground="White"
+                        FontSize="45"
+                        Margin="20,2,0,0"
+                        FontWeight="DemiBold"
+                        FontFamily="Gabriola"
+                        VerticalAlignment="Top" HorizontalAlignment="left" 
+    
+                        />
+                    </Grid>
+                </Border>
             </Grid>
             
             <Grid Grid.Row="1">
@@ -136,10 +188,155 @@
             </Grid>
 
 
-            <TextBlock Text="A" Grid.Row="0" FontSize="20"/>
+            
             <TextBlock Text="B" Grid.Row="1" FontSize="20"/>
             <TextBlock Text="C" Grid.Row="2" FontSize="20"/>
             <TextBlock Text="D" Grid.Row="3" FontSize="20"/>
+
+            <ListBox
+                Background="Transparent"
+                HorizontalContentAlignment="Center"
+                Grid.Row="2" Grid.RowSpan="2" ItemsSource="{Binding List_TripCards}"
+                ScrollViewer.PanningRatio="0.0001"
+                ScrollViewer.PanningDeceleration="2000"
+                >
+                <ListBox.ItemTemplate>
+                    <DataTemplate >
+                        <Grid Width="600" Height="200" Margin="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2.618*"/>
+                                <ColumnDefinition Width="1.618*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="1.618*"/>
+                                <ColumnDefinition Width="2.618*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Border Grid.RowSpan="5" Grid.ColumnSpan ="3" Grid.Column="1"
+                           Background="#55E6C7C2">
+                            </Border>
+
+                            <Border Grid.RowSpan="3"
+                           Background="Gray"
+                           CornerRadius="80,0,0,0">
+                                <Border CornerRadius="80,0,0,0">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{Binding Image_path1}"/>
+                                    </Border.Background>
+                                </Border>
+
+                            </Border>
+
+                            <Border Grid.RowSpan="3" Grid.Column="4"
+                           Background="Gray"
+                           CornerRadius="0,80,0,0"
+                           >
+                                <Border CornerRadius="0,80,0,0">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{Binding Image_path2}"/>
+                                    </Border.Background>
+                                </Border>
+                            </Border>
+
+                            <Border Grid.Row="3" Grid.RowSpan="2"
+                           Background="#5555ff55"
+                           CornerRadius="0,0,0,60"
+                           BorderBrush="#55aa55"
+                           BorderThickness="1"
+                           >
+                            </Border>
+                            <Border Grid.Row="3" Grid.Column="4" Grid.RowSpan="2"
+                           Background ="#55FF8500"
+                           CornerRadius="0,0,60,0"
+                           BorderBrush="#cc8500"
+                           BorderThickness="1"
+                           >
+                            </Border>
+
+                            <Border Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="1">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="../../Images/dottedPathIcon.png"/>
+                                </Border.Background>
+                            </Border>
+
+                            <TextBlock Grid.Column="1" Grid.Row="3"
+                              Text="{Binding Start_loc}"
+                              FontFamily="Gabriola"
+                              FontSize="30"
+                              HorizontalAlignment="Center"/>
+
+                            <TextBlock Grid.Column="3" Grid.Row="3"
+                              Text="{Binding End_loc}"
+                              FontFamily="Gabriola"
+                              FontSize="30"
+                              HorizontalAlignment="Center"/>
+
+                            <TextBlock Grid.Column="1" Grid.Row="4"
+                              Text="{Binding Beginning_Date}"
+                              FontFamily="Gabriola"
+                              FontSize="25"
+                              HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="3" Grid.Row="4"
+                              Text="{Binding End_date}"
+                              FontFamily="Gabriola"
+                              FontSize="25"
+                              HorizontalAlignment="Center"/>
+
+                            <Button Grid.Row="4" Grid.Column="2"
+>
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Border
+                                    HorizontalAlignment="Left"
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="10"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1"
+                                    >
+                                            <TextBlock
+                                        Text="Trip info"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        FontFamily="Gabriola"
+                                        FontSize="20"
+            
+                                        Foreground="{TemplateBinding Foreground}"
+                                        />
+
+                                        </Border>
+
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="{StaticResource Color2}"/>
+                                                <Setter Property="TextBlock.Foreground" Value="White" />
+                                                <Setter Property="BorderBrush" Value="White"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter Property="Background" Value="#5588ddff"/>
+                                                <Setter Property="TextBlock.Foreground" Value="Black" />
+                                                <Setter Property="BorderBrush" Value="#8888ff"/>
+                                            </Trigger>
+
+
+
+                                        </ControlTemplate.Triggers>
+
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
 
 
         </Grid>

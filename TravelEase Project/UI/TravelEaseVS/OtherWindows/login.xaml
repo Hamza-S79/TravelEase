@@ -102,10 +102,10 @@
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
 
-                        <RadioButton VerticalAlignment="Center" Grid.Column="0" FontSize="11" Content="Admin"    Tag="Admin"    GroupName="UserType" IsChecked="True" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
-                        <RadioButton VerticalAlignment="Center" Grid.Column="1" FontSize="11" Content="Traveler" Tag="Traveler" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
-                        <RadioButton VerticalAlignment="Center" Grid.Column="2" FontSize="11" Content="Operator" Tag="Trip Operator" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
-                        <RadioButton VerticalAlignment="Center" Grid.Column="3" FontSize="11" Content="Provider" Tag="Service Provider" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
+                        <RadioButton VerticalAlignment="Center" Grid.Column="0" FontSize="11" Content="Traveler" Tag="1" GroupName="UserType" IsChecked="True" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
+                        <RadioButton VerticalAlignment="Center" Grid.Column="1" FontSize="11" Content="Admin"    Tag="2" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
+                        <RadioButton VerticalAlignment="Center" Grid.Column="2" FontSize="11" Content="Operator" Tag="3" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
+                        <RadioButton VerticalAlignment="Center" Grid.Column="3" FontSize="11" Content="Provider" Tag="4" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
                     </Grid>
 
 

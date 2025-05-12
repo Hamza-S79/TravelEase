@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:TravelEaseVS"
              xmlns:viewModel ="clr-namespace:TravelEaseVS.MVVM.ViewModel"
              xmlns:view ="clr-namespace:TravelEaseVS.MVVM.View"
-             
+             xmlns:TripPages="clr-namespace:TravelEaseVS.MVVM.View.Announced_Trip_Pages"
              StartupUri="OtherWindows/login.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -21,8 +21,21 @@
                 <view:AnnouncedTripsView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:Bookings}">
+            <DataTemplate DataType="{x:Type viewModel:BookingsModel}">
                 <view:Bookings/>
+            </DataTemplate>
+
+
+            <DataTemplate DataType="{x:Type viewModel:TripDetailsModel}">
+                <TripPages:TripDetails/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:OpHomeViewModel}">
+                <view:OpHomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:OpAnnouncedTripsModel}">
+                <view:OpAnnouncedTripsView/>
             </DataTemplate>
 
 

@@ -2,15 +2,18 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Brush x:Key="Color1">#4A7164</Brush>
     <Brush x:Key="Color2">#F57753</Brush>
-    <Brush x:Key="Color3">#3AF8D3</Brush>
+    <Brush x:Key="Color3">#5555ff55</Brush>
 
-
+    
 
     <Color x:Key="Color1a">#F57753</Color>
     <Color x:Key="Color1b">#f5a773</Color>
 
-    <Color x:Key="Color4a">#aa11dd</Color>
-    <Color x:Key="Color4b">#ee44ff</Color>
+    <Color x:Key="Color4a">#48aB48</Color>
+    <Color x:Key="Color4b">#78cB78</Color>
+
+    <Color x:Key="Color5a">#579EbB</Color>
+    <Color x:Key="Color5b">#87CEEB</Color>
 
 
 </ResourceDictionary>

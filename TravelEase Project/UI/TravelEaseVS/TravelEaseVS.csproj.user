@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\AdminHomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\AnnouncedTripsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,9 +31,27 @@
     <Compile Update="MVVM\View\HomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\OpAnnouncedTripsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\OpHomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OpMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProviderMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\AdminHomeView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\AnnouncedTripsView.xaml">
@@ -46,6 +70,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OpMainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProviderMainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Colors.xaml">

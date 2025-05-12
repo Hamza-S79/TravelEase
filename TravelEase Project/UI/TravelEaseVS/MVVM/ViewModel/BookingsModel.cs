@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using TravelEaseVS.Core;
 
+
 namespace TravelEaseVS.MVVM.ViewModel
 {
 
-    public class Booking
+    public class BookingCard
     {
         private string _name, _stdate, _eddate, _status, _payment, _img;
         private string[] group;
@@ -28,33 +31,48 @@ namespace TravelEaseVS.MVVM.ViewModel
 
         //public string[] Group { get { } set { } }
 
-        public Booking()
-        {
-
-        }
 
     }
-    class Bookings : ObserveObj
+    class BookingsModel : ObserveObj
     {
         int num_of_bookings = 17;
-
-        private ObservableCollection<Booking> _List_Bookings;
-        public ObservableCollection<Booking> List_Bookings { get { return _List_Bookings; } set { _List_Bookings = value; OnPropertyChanged(); }}
+        private int _id;
+        public int id { get { return _id; } set { _id = value; } } 
+        private ObservableCollection<BookingCard> _List_Bookings;
+        public ObservableCollection<BookingCard> List_Bookings { get { return _List_Bookings; } set { _List_Bookings = value; OnPropertyChanged(nameof(List_Bookings)); }}
 
         public string name = "Nawaz Sharif", stdate = "12-07-2025", eddate ="17-07-2025", status = "Confirmed", payment = "Confirmed", img = "Images/Bali.jpeg";
         public string[] group;
         public int price = 15000, tid = 0, bid = 0;
 
-        public Bookings()
+        public BookingsModel()
         {
-            List_Bookings = new ObservableCollection<Booking>();
+            num_of_bookings = 20;
+            List_Bookings = new ObservableCollection<BookingCard>();
             for (int i = 0; i < num_of_bookings; i++)
             {
-                List_Bookings.Add(new Booking { Start_date = stdate, End_date = eddate, Booking_status = status, Payment_status = payment, Name = name, Trip_id = tid, Booking_id=i, Price = price, Image_path = img}) ;
+                List_Bookings.Add(new BookingCard { Start_date = stdate, End_date = eddate, Booking_status = status, Payment_status = payment, Name = name, Trip_id = tid, Booking_id = i, Price = price, Image_path = img });
             }
-
             OnPropertyChanged();
         }
+        public BookingsModel(int uid)
+        {
+            num_of_bookings = 40;
+            List_Bookings = new ObservableCollection<BookingCard>();
+            for (int i = 0; i < num_of_bookings; i++)
+            {
+                List_Bookings.Add(new BookingCard { Start_date = stdate, End_date = eddate, Booking_status = status, Payment_status = payment, Name = name, Trip_id = tid, Booking_id=i, Price = price, Image_path = img}) ;
+            }
+            OnPropertyChanged();
+
+        }
+        //public event PropertyChangedEventHandler PropertyChanged;
+
+      
+        //protected virtual void OnPropertyChanged(string propertyName)
+        //{
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        //}
 
 
     }

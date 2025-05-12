@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TravelEaseVS.MVVM.View.Announced_Trip_Pages;
 using TravelEaseVS.MVVM.ViewModel;
+
 namespace TravelEaseVS.MVVM.View
 {
     /// <summary>

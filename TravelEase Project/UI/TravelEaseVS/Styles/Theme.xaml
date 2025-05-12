@@ -115,7 +115,7 @@
 
     <Style TargetType="Border" x:Key="Text Panel Orange" >
         <Setter Property="CornerRadius" Value="30"/>
-        <Setter Property="Margin" Value="15"/>
+        <Setter Property="Margin" Value="10"/>
 
         <Setter Property="Background">
             <Setter.Value>
@@ -136,7 +136,7 @@
             <Setter.Value>
                 
         Text="{TemplateBinding Property= Content}"
-        Foreground="White"
+        Foreground="Black"
         FontSize="45"
         FontWeight="Demibold"
         FontFamily="Gabriola"
@@ -153,9 +153,9 @@
 
 
 
-    <Style TargetType="Border" x:Key="Text Panel Purple" >
+    <Style TargetType="Border" x:Key="Text Panel Green" >
         <Setter Property="CornerRadius" Value="30"/>
-        <Setter Property="Margin" Value="15"/>
+        <Setter Property="Margin" Value="10"/>
 
         <Setter Property="Background">
             <Setter.Value>
@@ -172,27 +172,31 @@
 
             </Setter.Value>
         </Setter>
-        <Setter Property="TextBlock.Text">
+
+    </Style>
+
+
+    <Style TargetType="Border" x:Key="Text Panel Blue" >
+        <Setter Property="CornerRadius" Value="30"/>
+        <Setter Property="Margin" Value="10"/>
+
+        <Setter Property="Background">
             <Setter.Value>
 
-                Text="{TemplateBinding Property= Content}"
-        Foreground="White"
-        FontSize="45"
-        FontWeight="Demibold"
-        FontFamily="Gabriola"
-        VerticalAlignment="Top" HorizontalAlignment="left"
+                <LinearGradientBrush
+  
+>
+                    <GradientStop Color="{StaticResource Color5a}" Offset="0.0"/>
+                    <GradientStop Color="{StaticResource Color5b}" Offset="1"/>
+
+                </LinearGradientBrush>
+
 
 
             </Setter.Value>
         </Setter>
 
-
-
-
     </Style>
-
-
-
 
 
 

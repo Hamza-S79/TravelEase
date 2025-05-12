@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TravelEaseVS.MVVM.ViewModel;
 namespace TravelEaseVS.MVVM.View.Bookings_Pages
 {
     /// <summary>
@@ -26,6 +26,8 @@ namespace TravelEaseVS.MVVM.View.Bookings_Pages
     {
         public Bookings_List(Frame parentFrame)
         {
+            
+            
             InitializeComponent();
         }
     }

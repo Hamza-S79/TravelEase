@@ -8,9 +8,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Bookings_List">
-
     <Page.DataContext>
-        <viewModel:Bookings/>
+        <viewModel:BookingsModel/>
     </Page.DataContext>
 
     <Grid>
