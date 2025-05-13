@@ -261,9 +261,7 @@
                             </Border>
 
                             <Border Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="1">
-                                <Border.Background>
-                                    <ImageBrush ImageSource="../../Images/dottedPathIcon.png"/>
-                                </Border.Background>
+
                             </Border>
 
                             <TextBlock Grid.Column="1" Grid.Row="3"

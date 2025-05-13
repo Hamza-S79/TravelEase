@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TravelEaseVS.MVVM.ViewModel;
 using TravelEaseVS.OtherWindows;
 
 namespace TravelEaseVS
@@ -20,10 +21,35 @@ namespace TravelEaseVS
     /// </summary>
     public partial class OpMainWindow : Window
     {
-        public OpMainWindow()
+        private int _O_id;
+        public int O_id { get { return _O_id; } set { _O_id = value; } }
+        public OpMainWindow(int id)
         {
+            O_id = id;
             InitializeComponent();
+            this.Loaded += Load;
+            
+            
         }
+
+        private void Load(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is OpViewHandler vm)
+            {
+                vm.id = O_id.ToString();
+                vm.reset();
+            }
+        }
+
+        private void Ld(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is OpViewHandler vm)
+            {
+                vm.MyView = vm.oatv;
+            }
+        }
+
+
         private void Go_to_login(object sender, RoutedEventArgs e)
         {
             login lw = new login();

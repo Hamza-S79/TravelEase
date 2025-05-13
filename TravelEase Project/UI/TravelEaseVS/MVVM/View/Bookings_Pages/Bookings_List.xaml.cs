@@ -24,11 +24,15 @@ namespace TravelEaseVS.MVVM.View.Bookings_Pages
 
     public partial class Bookings_List : Page
     {
+        
         public Bookings_List(Frame parentFrame)
         {
-            
-            
+
             InitializeComponent();
+            
+            
         }
+
+        
     }
 }

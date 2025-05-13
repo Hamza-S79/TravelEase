@@ -507,3 +507,34 @@ Fonts/Space_Mono/*.ttf
 !TravelEaseVS/MVVM/ViewModel/*.cs
 !TravelEaseVS/Core/*.cs
 !TravelEaseVS/Styles/*.xaml
+*.cache
+*.dll
+*.baml
+*.baml
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/App.baml
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/App.g.cs
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/App.g.i.cs
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/apphost.exe
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/MainWindow.baml
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/MainWindow.g.cs
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/MainWindow.g.i.cs
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/MVVM/View/HomeView.baml
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/MVVM/View/HomeView.g.cs
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/MVVM/View/HomeView.g.i.cs
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/ref/TravelEaseVS.dll
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/refint/TravelEaseVS.dll
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS.AssemblyInfo.cs
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS.AssemblyInfoInputs.cache
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS.csproj.CoreCompileInputs.cache
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS.dll
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS.g.resources
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS.pdb
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS.sourcelink.json
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS_MarkupCompile.cache
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS_MarkupCompile.i.cache
+TravelEase Project/UI/TravelEaseVS/obj/Debug/net8.0-windows/TravelEaseVS_MarkupCompile.lref
+*.exe
+*.pdb
+*.exe
+*.dll
+*.v2

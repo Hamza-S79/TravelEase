@@ -4,16 +4,119 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TravelEaseVS.MVVM.View.Admin_Pages"
+      xmlns:viewModel="clr-namespace:TravelEaseVS.MVVM.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProviderList">
 
-    <Grid>
-        <Border Background="Crimson">
+    <Page.DataContext>
+        <viewModel:AdminProviderModel/>
+    </Page.DataContext>
 
-            <Button Margin="40"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="10*"/>
+        </Grid.RowDefinitions>
+
+
+            <Button 
                     Content="PROVIDER LIST PAGE"
                     Click="NavToProvInfo"/>
-        </Border>
+
+
+        <ListBox
+                ItemsSource="{Binding List_PrCards}"
+                Grid.Row="1"
+                Background="Transparent"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                >
+            <ListBox.ItemTemplate>
+                <DataTemplate >
+                    <Grid  Background="#55E6C7C2" Width="700" Height="200" Margin="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.RowSpan="5" Grid.ColumnSpan ="3" Grid.Column="1"
+                                    Background="#55E6C7C2">
+                        </Border>
+
+                        <Border Grid.RowSpan="5"
+                           Margin="1"
+                            CornerRadius="10"
+                            BorderThickness="2"
+                            BorderBrush="Gray"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                            <Image Source="{Binding ProfileImage}"
+                                   Stretch="Fill"
+                                   ClipToBounds="True" />
+                        </Border>
+
+
+
+
+
+                        <TextBlock Grid.Column="1" Grid.Row="0"
+                                  Text="{Binding Name}"
+                                  FontFamily="Gabriola"
+                                  FontSize="25"
+                                  Margin="5"
+                                  HorizontalAlignment="left"/>
+
+
+                        <TextBlock Grid.Column="1" Grid.Row="1"
+                                       Text="{Binding Email}"
+                                       FontFamily="Gabriola"
+                                      FontSize="25"
+                                        Margin="5"
+                                        HorizontalAlignment="left"/>
+
+                        <TextBlock Grid.Column="2" Grid.Row="0"
+                                       Text="{Binding Location}"
+                                       FontFamily="Gabriola"
+                                       FontSize="25"
+                                       Margin="5"
+                                       HorizontalAlignment="Left"/>
+
+                        <TextBlock Grid.Column="1" Grid.Row="4"
+                                       Text="{Binding Age}"
+                                       FontFamily="Gabriola"
+                                       FontSize="25"
+                                       Margin="5"
+                                       HorizontalAlignment="Left"/>
+
+                        <TextBlock Grid.Column="2" Grid.Row="1"
+                                       Text="{Binding Contact}"
+                                       FontFamily="Gabriola"
+                                       FontSize="25"
+                                       Margin="5"
+                                       HorizontalAlignment="Left"/>
+
+                        <TextBlock Grid.Column="1" Grid.Row="2"
+                                       Text="{Binding GovernmentRegistration}"
+                                       FontFamily="Gabriola"
+                                       FontSize="25"
+                                       Margin="5"
+                                       HorizontalAlignment="Left"/>
+
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
     </Grid>
 </Page>

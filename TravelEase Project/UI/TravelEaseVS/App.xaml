@@ -34,10 +34,7 @@
                 <view:OpHomeView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:OpAnnouncedTripsModel}">
-                <view:OpAnnouncedTripsView/>
-            </DataTemplate>
-            
+
             <!-- ADMIN VIEW MODELS CONNECTED WITH ADMIN VIEWS-->
             <DataTemplate DataType="{x:Type viewModel:AdminHomeViewModel}">
                 <view:AdminHomeView/>

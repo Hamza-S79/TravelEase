@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using TravelEaseVS.Core;
 using TravelEaseVS.MVVM.View;
 using TravelEaseVS.MVVM.ViewModel;
@@ -44,7 +46,7 @@ namespace TravelEaseVS.MVVM.ViewModel
             //U_id = id;
             hmv = new HomeViewModel();
             ATV = new AnnouncedTripsModel();
-            BKS = new BookingsModel(U_id);
+            BKS = new BookingsModel();
             //bks = new Bookings(U_id);
             MyView = hmv;
 
@@ -60,10 +62,8 @@ namespace TravelEaseVS.MVVM.ViewModel
                  MyView = ATV;
              });
 
-            BKSCommand = new RelayCommand(o =>
-            {
+            BKSCommand = new RelayCommand(o=>{
                 MyView = BKS;
-
             });
 
 

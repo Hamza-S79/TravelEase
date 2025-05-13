@@ -11,12 +11,13 @@
         Background="#FAF0E6"
 
         Title="TravelEase Operator" Height="740" Width="1300"
-    >
+    
+        x:Name = "OMain"
+        >
 
     <Window.DataContext>
         <viewModel:OpViewHandler/>
     </Window.DataContext>
-
 
 
     <Border>
@@ -41,6 +42,7 @@
                 <RowDefinition Height="6.84*"/>
 
             </Grid.RowDefinitions>
+
 
             <Border 
         Grid.Row="0" 
@@ -73,7 +75,7 @@
 
 
                 <Button Style="{StaticResource NavButton}" Grid.Row="0" Content="Home" Command="{Binding OHMVcommand}"/>
-                <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Your Announced Trips" Command="{Binding OATMcommand}"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Your Announced Trips" Click ="Ld"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Trip Designs" Command="{Binding BKSCommand}"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Active Trips" Command="{Binding ATVCommand}"/>
                 <Button Style="{StaticResource NavButton}" Grid.Row="4" Content="Past Trips"/>
@@ -221,4 +223,5 @@
 
 
     </Border>
+
 </Window>

@@ -8,12 +8,15 @@ using TravelEaseVS.Core;
 
 namespace TravelEaseVS.MVVM.ViewModel
 {
-    public class OpHomeViewModel: INotifyPropertyChanged
+    public class OpTripDesigns:INotifyPropertyChanged
     {
-        public OpHomeViewModel()
+        
+        public OpTripDesigns()
         {
-            
+          
         }
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

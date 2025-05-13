@@ -8,7 +8,7 @@ using System.Windows.Media.Animation;
 
 namespace TravelEaseVS.Core
 {
-    class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         private Action<object> action;
         private Func<object, bool> func;

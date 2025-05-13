@@ -23,9 +23,9 @@ namespace TravelEaseVS
         public string test = "";
 //        public ViewHandler vh { get { return _vh; }  set { _vh = value; } }
         public int uid { get { return _uidd; } set { _uidd = value; } }
-        public MainWindow(int _uid)
+        public MainWindow(int id)
         {
-            uid = _uid;
+            uid = id;
             InitializeComponent();
             //          vh = new ViewHandler(uid);
             //          DataContext = vh;

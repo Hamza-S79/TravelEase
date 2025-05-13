@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using TravelEaseVS.Core;
+using TravelEaseVS.MVVM.View;
 
 
 namespace TravelEaseVS.MVVM.ViewModel
@@ -45,9 +46,10 @@ namespace TravelEaseVS.MVVM.ViewModel
         public string[] group;
         public int price = 15000, tid = 0, bid = 0;
 
+        Bookings bk;
         public BookingsModel()
         {
-            num_of_bookings = 20;
+            num_of_bookings = 7;
             List_Bookings = new ObservableCollection<BookingCard>();
             for (int i = 0; i < num_of_bookings; i++)
             {
@@ -55,9 +57,9 @@ namespace TravelEaseVS.MVVM.ViewModel
             }
             OnPropertyChanged();
         }
-        public BookingsModel(int uid)
+        public void regen(int uid)
         {
-            num_of_bookings = 40;
+            num_of_bookings = uid;
             List_Bookings = new ObservableCollection<BookingCard>();
             for (int i = 0; i < num_of_bookings; i++)
             {

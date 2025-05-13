@@ -13,6 +13,6 @@
     </UserControl.DataContext>
 
     <Grid>
-        <Border Background="Black"/>
+        <Border Background="Blue"/>
     </Grid>
 </UserControl>

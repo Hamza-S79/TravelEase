@@ -70,6 +70,7 @@ namespace TravelEaseVS.OtherWindows
                     {
                         reader.Read();
                         MainWindow mainWindow = new MainWindow(Convert.ToInt32(reader[0]));
+                        //MainWindow mainWindow = new MainWindow();
                         mainWindow.Show();
                         this.Close();
 
@@ -98,7 +99,7 @@ namespace TravelEaseVS.OtherWindows
                 case 3:
                     if (email == "saleem" && password == "123")
                     {
-                        OpMainWindow OpWindow = new OpMainWindow();
+                        OpMainWindow OpWindow = new OpMainWindow(3);
                         OpWindow.Show();
                         this.Close();
                     }

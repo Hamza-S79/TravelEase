@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TravelEaseVS.MVVM.ViewModel;
+using TravelEaseVS.MVVM.View.Bookings_Pages;
 namespace TravelEaseVS.MVVM.View
 {
     /// <summary>
@@ -29,7 +30,7 @@ namespace TravelEaseVS.MVVM.View
             //bm = new BookingsModel(id);
             InitializeComponent();
             //DataContext = bm;
-            Bookings_.Navigate(new Bookings_Pages.Bookings_List(Bookings_));
+            Bookings_.Navigate(new Bookings_List(Bookings_));
         }
     }
 }
