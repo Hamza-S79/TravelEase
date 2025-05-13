@@ -1,0 +1,102 @@
+﻿<Window x:Class="TravelEaseFixed.MVVM.View.OtherWindows.Signup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelEaseFixed.MVVM.View.OtherWindows"
+        mc:Ignorable="d"
+        Title="Signup" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Side (Sign Form)-->
+        <Grid Grid.Column="0" Background="#faf0e6" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="20*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.2*"/>
+                        <!-- Title -->
+                        <RowDefinition Height="0.5*"/>
+                        <!-- From Type -->
+                        <RowDefinition Height="8*"/>
+                        <!-- MVVM may be or the form -->
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Sign Up"
+                               FontSize="30" FontWeight="Bold"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Foreground="#333"/>
+
+                    <!-- Buttons with Command Binding and Color Binding -->
+                    <Grid Grid.Row="1"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Content="Traveler" 
+                            Template="{StaticResource NoMouseOverButtonTemplate}"
+                            Command="{Binding SwitchFormCommand}" 
+                            CommandParameter="Traveler"
+                            Background="{Binding TravelerButtonColor}"
+                            BorderBrush="White"
+                            Grid.Column="0"
+                            Margin="10,0"/>
+                        <!-- Margin of 10 on left and right -->
+
+                        <Button Content="Operator" 
+                            Template="{StaticResource NoMouseOverButtonTemplate}"
+                            Command="{Binding SwitchFormCommand}" 
+                            CommandParameter="Operator"
+                            Background="{Binding OperatorButtonColor}"
+                            Grid.Column="1"
+                            Margin="10,0" BorderBrush="White"/>
+                        <!-- Margin of 10 on left and right -->
+
+                        <Button Content="Hotel" 
+                            Template="{StaticResource NoMouseOverButtonTemplate}"
+                            Command="{Binding SwitchFormCommand}" 
+                            CommandParameter="Hotel"
+                            Background="{Binding HotelButtonColor}"
+                            Grid.Column="2"
+                            BorderBrush="White"
+                            Margin="10,0"/>
+                        <!-- Margin of 10 on left and right -->
+                    </Grid>
+
+                    <Grid Grid.Row="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="1">
+                            <ContentControl Content="{Binding CurrentForm}" />
+                        </Grid>
+                    </Grid>
+
+
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!-- Right Side -->
+        <Grid Grid.Column="1" Background="#4A6154" />
+    </Grid>
+</Window>

@@ -1,0 +1,305 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="Colors.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+    
+
+
+
+    <Style x:Key="NavButton"
+           TargetType="Button">
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid   Background= "{TemplateBinding Background}"
+                            Height="{TemplateBinding Height}"
+        
+                            >
+                        <TextBlock Text = "{TemplateBinding Property=Content}"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         FontSize="25"
+                         Foreground="{TemplateBinding Foreground}"
+                         FontFamily="Gabriola"
+                        >
+
+
+                        </TextBlock>
+
+
+                    </Grid>
+
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Color2}"/>
+                            <Setter Property="TextBlock.Foreground" Value="White"/>
+                            <Setter Property="TextBlock.FontWeight" Value="DemiBold"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="White"/>
+                        
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Background" Value="{StaticResource ResourceKey=Color1}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Color1}"/>
+        <Setter Property="Visibility" Value="Visible"/>
+        <Setter Property="Foreground" Value="White "/>
+   
+
+    </Style>
+
+
+    <Style x:Key="TravelEaseMain"
+       TargetType="Button">
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid   Background= "{TemplateBinding Background}"
+                        Height="{TemplateBinding Height}"
+    
+                        >
+                        <TextBlock Text = "{TemplateBinding Property=Content}"
+                     VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                     HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                     FontSize="{TemplateBinding FontSize}"
+                     Foreground="{TemplateBinding Foreground}"
+                     FontFamily="Gabriola"
+                    >
+
+
+                        </TextBlock>
+
+
+                    </Grid>
+
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Color2}"/>
+                            <Setter Property="TextBlock.Foreground" Value="White"/>
+                            <Setter Property="TextBlock.FontWeight" Value="DemiBold"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="White"/>
+                            <Setter Property="Background" Value="#5555ff55"/>
+                            
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+
+        
+        
+        <Setter Property="Visibility" Value="Visible"/>
+        
+
+    </Style>
+
+
+    <Style TargetType="Border" x:Key="Text Panel Orange" >
+        <Setter Property="CornerRadius" Value="30"/>
+        <Setter Property="Margin" Value="10"/>
+
+        <Setter Property="Background">
+            <Setter.Value>
+                
+                    <LinearGradientBrush
+  
+>
+                        <GradientStop Color="{StaticResource Color1a}" Offset="0.0"/>
+                        <GradientStop Color="{StaticResource Color1b}" Offset="1"/>
+
+                    </LinearGradientBrush>
+                
+
+
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextBlock.Text">
+            <Setter.Value>
+                
+        Text="{TemplateBinding Property= Content}"
+        Foreground="Black"
+        FontSize="45"
+        FontWeight="Demibold"
+        FontFamily="Gabriola"
+        VerticalAlignment="Top" HorizontalAlignment="left" 
+        
+        
+            </Setter.Value>
+        </Setter>
+
+
+       
+            
+    </Style>
+
+
+
+    <Style TargetType="Border" x:Key="Text Panel Green" >
+        <Setter Property="CornerRadius" Value="30"/>
+        <Setter Property="Margin" Value="10"/>
+
+        <Setter Property="Background">
+            <Setter.Value>
+
+                <LinearGradientBrush
+  
+>
+                    <GradientStop Color="{StaticResource Color4a}" Offset="0.0"/>
+                    <GradientStop Color="{StaticResource Color4b}" Offset="1"/>
+
+                </LinearGradientBrush>
+
+
+
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+    <Style TargetType="Border" x:Key="Text Panel Blue" >
+        <Setter Property="CornerRadius" Value="30"/>
+        <Setter Property="Margin" Value="10"/>
+
+        <Setter Property="Background">
+            <Setter.Value>
+
+                <LinearGradientBrush
+  
+>
+                    <GradientStop Color="{StaticResource Color5a}" Offset="0.0"/>
+                    <GradientStop Color="{StaticResource Color5b}" Offset="1"/>
+
+                </LinearGradientBrush>
+
+
+
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+
+
+
+
+
+
+
+
+    <ControlTemplate x:Key="NoMouseOverButtonTemplate" TargetType="{x:Type Button}">
+        <Border x:Name="border" 
+       Background="{TemplateBinding Background}"
+       BorderBrush="{TemplateBinding BorderBrush}"
+       BorderThickness="{TemplateBinding BorderThickness}"
+       RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <ScaleTransform x:Name="scaleTransform" ScaleX="1" ScaleY="1"/>
+            </Border.RenderTransform>
+            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <!-- Enlarge entire button on hover -->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="scaleTransform"
+                                    Storyboard.TargetProperty="ScaleX"
+                                    To="1.05" Duration="0:0:0.1"/>
+                            <DoubleAnimation Storyboard.TargetName="scaleTransform"
+                                    Storyboard.TargetProperty="ScaleY"
+                                    To="1.05" Duration="0:0:0.1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="scaleTransform"
+                                    Storyboard.TargetProperty="ScaleX"
+                                    To="1" Duration="0:0:0.1"/>
+                            <DoubleAnimation Storyboard.TargetName="scaleTransform"
+                                    Storyboard.TargetProperty="ScaleY"
+                                    To="1" Duration="0:0:0.1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+
+            <!-- Original disabled state trigger -->
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="border" Property="Background" 
+               Value="{x:Static SystemColors.ControlLightBrush}"/>
+                <Setter Property="Foreground" 
+               Value="{x:Static SystemColors.GrayTextBrush}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+
+    <Style x:Key="SelectionToggleButtonStyle" TargetType="ToggleButton">
+        <Setter Property="Background" Value="LightGray"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border x:Name="border"
+                   Background="{TemplateBinding Background}"
+                   BorderBrush="Gray"
+                   BorderThickness="1"
+                   CornerRadius="5"
+                   Padding="10,5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Hover Scale Animation -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="RenderTransformOrigin" Value="0.5,0.5"/>
+                            <Setter TargetName="border" Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1.05" ScaleY="1.05"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                        <!-- Selected State -->
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="#4A6154"/>
+                            <!-- Dark Green -->
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+</ResourceDictionary>

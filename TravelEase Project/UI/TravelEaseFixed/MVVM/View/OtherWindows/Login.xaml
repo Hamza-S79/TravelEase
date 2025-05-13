@@ -1,0 +1,156 @@
+﻿<Window x:Class="TravelEaseFixed.MVVM.View.OtherWindows.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelEaseFixed.MVVM.View.OtherWindows"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <!-- Left Side -->
+        <Grid Grid.Column="0" Background="{StaticResource Color1}"/>
+
+        <!-- Right Side (Login Form) -->
+        <Grid Grid.Column="1" Background="#FAF9F6">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <!-- Title -->
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <!-- Title -->
+                        <RowDefinition Height="1*"/>
+                        <!-- ID -->
+                        <RowDefinition Height="1*"/>
+                        <!-- Password -->
+                        <RowDefinition Height="1*"/>
+                        <!-- user type -->
+                        <RowDefinition Height="0.3*"/>
+                        <!-- invalid password text -->
+                        <RowDefinition Height="1.5*"/>
+                        <!-- Login Button -->
+                        <RowDefinition Height="1*"/>
+                        <!-- SignUp Text -->
+                    </Grid.RowDefinitions>
+
+                    <!-- Login Title -->
+                    <TextBlock Grid.Row="0" Text="Login" 
+                             FontSize="28" FontWeight="Bold" 
+                             Foreground="Black" 
+                             HorizontalAlignment="Center"
+                             Margin="0,0,0,20"/>
+
+
+
+                    <!-- ID TextBox with placeholder -->
+                    <Grid Grid.Row="1" >
+                        <TextBox Name="IdTextBox" 
+                               Background="#F7F7F7" BorderBrush="#E0643A" BorderThickness="1"
+                               VerticalAlignment="Center"
+                               Padding="10" FontSize="11" TextChanged="IdTextBox_TextChanged" />
+                        <TextBlock Text="ID" 
+                                 Foreground="Gray" 
+                                 Margin="15,0,0,0"
+                                 VerticalAlignment="Center"
+                                 IsHitTestVisible="False"
+                                 Visibility="{Binding Text.IsEmpty, ElementName=IdTextBox, Converter={StaticResource BoolToVisibilityConverter}}" />
+                    </Grid>
+
+                    <!-- Password TextBox with placeholder -->
+                    <Grid Grid.Row="2"  VerticalAlignment="Center">
+                        <PasswordBox x:Name="PasswordBox" 
+                                  Background="#F7F7F7" BorderBrush="#E0643A" BorderThickness="1"
+                                  Padding="10" FontSize="11"
+                                  PasswordChanged="PasswordBox_PasswordChanged"/>
+                        <TextBlock x:Name="PasswordPlaceholder" Text="Password" 
+                                  Foreground="Gray" 
+                                  Margin="15,0,0,0"
+                                  VerticalAlignment="Center"
+                                  IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- user type -->
+                    <Grid Grid.Row="3"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1.1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <RadioButton VerticalAlignment="Center" Grid.Column="0" FontSize="11" Content="Traveler" Tag="1" GroupName="UserType" IsChecked="True" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
+                        <RadioButton VerticalAlignment="Center" Grid.Column="1" FontSize="11" Content="Admin"    Tag="2" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
+                        <RadioButton VerticalAlignment="Center" Grid.Column="2" FontSize="11" Content="Operator" Tag="3" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
+                        <RadioButton VerticalAlignment="Center" Grid.Column="3" FontSize="11" Content="Provider" Tag="4" GroupName="UserType" Checked="UserTypeRadioButton_Checked" Margin="1,0" />
+                    </Grid>
+
+
+                    <TextBlock Grid.Row="4"
+                       x:Name="ErrorTextBlock"
+                       Text="Invalid ID or Password!"
+                       Foreground="Red"
+                       FontSize="10"
+                       Visibility="Collapsed"
+                       HorizontalAlignment="Center"
+                      />
+
+                    <!-- Login Button -->
+                    <Button Grid.Row="5" Margin="0,5,0,5" Height="40" Content="Login" 
+                          Background="{StaticResource Color2}" Foreground="White" BorderThickness="0"
+                          FontSize="16" Cursor="Hand"
+                          HorizontalAlignment="Stretch"
+                          Focusable="False"
+                          Template="{StaticResource NoMouseOverButtonTemplate}"
+                          Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="Button_Click"/>
+
+
+                    <!-- Sign Up Text -->
+                    <TextBlock Grid.Row="6" HorizontalAlignment="Center" FontSize="12" Foreground="Gray">
+                      <Run Text="Don't have an account? " />
+                      <Span Cursor="Hand" MouseLeftButtonUp="SignUpLink_Click">
+                          <Span.Style>
+                              <Style TargetType="Span">
+                                  <Setter Property="Foreground" Value="Gray" />
+                                 <Setter Property="TextDecorations" Value="Underline"/>
+                                  <Style.Triggers>
+                                      <Trigger Property="IsMouseOver" Value="True">
+                                          <Setter Property="Foreground" Value="Black"/>
+                                      </Trigger>
+                                  </Style.Triggers>
+                              </Style>
+                          </Span.Style>
+                          <Run Text="Sign Up"/>
+                      </Span>
+                    </TextBlock>
+
+
+
+
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,210 @@
+﻿<Window x:Class="TravelEaseFixed.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelEaseFixed"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="740" Width="1300"
+        Background="#FAF0E6">
+    <Border>
+        <Grid Background="Transparent">
+            <!--Main Grid-->
+
+            <Grid.ColumnDefinitions>
+
+
+                <ColumnDefinition Width="1.61*"/>
+
+                <ColumnDefinition Width="6.84*"/>
+
+                <ColumnDefinition Width="1*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="6.84*"/>
+
+            </Grid.RowDefinitions>
+
+            <Border 
+                Grid.Row="0" 
+                Grid.ColumnSpan="3" 
+                Background="{StaticResource Color1}"
+                BorderBrush="{StaticResource Color1}"
+                >
+            </Border>
+
+
+
+
+
+
+            <Grid Grid.Row="1" Background="{StaticResource Color1}">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+
+
+                </Grid.RowDefinitions>
+
+
+
+                <Button Style="{StaticResource NavButton}" Grid.Row="0" Content="Home" Click="NavToHome" />
+                <Button Style="{StaticResource NavButton}" Grid.Row="1" Content="Announced Trips" Click="NavToAnnTrips"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="2" Content="Active Bookings" Click="NavToBookings"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="3" Content="Active Trips"  Click="NavToActTrips"/>
+                <Button Style="{StaticResource NavButton}" Grid.Row="4" Content="My Travel Book"/>
+
+
+
+
+
+            </Grid>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width ="*"/>
+                    <ColumnDefinition Width ="1.61*"/>
+                    <ColumnDefinition Width ="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button 
+                    Grid.Column="0"
+                    Height="50"
+                    Width="50"
+                    HorizontalAlignment="Right"
+                        >
+
+                    <Button.Template>
+
+
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                CornerRadius="50"
+                                Height="{TemplateBinding Height}"
+                                Width="{TemplateBinding Width}"
+                                Background="{TemplateBinding Background}"   
+                                
+                                >
+                                <Border CornerRadius="50" BorderBrush="#4A5164" BorderThickness="1">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Images/ExitIcon.png"/>
+                                    </Border.Background>
+                                </Border>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource Color2}"/>
+                                    <Setter Property="Width" Value="45" />
+                                    <Setter Property="Height" Value="45" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="False">
+                                    <Setter Property="Background" Value="{StaticResource Color1}"/>
+                                    <Setter Property="Width" Value="35" />
+                                    <Setter Property="Height" Value="35" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+
+
+                        </ControlTemplate>
+
+                    </Button.Template>
+                </Button>
+
+                <Button Height="56" Width="56"
+                        Grid.Column="1">
+                    <Button.Template>
+
+
+                        <ControlTemplate TargetType="Button">
+                            <Border
+             CornerRadius="56"
+              Height="{TemplateBinding Height}"
+               Width="{TemplateBinding Width}"
+            Background="Gray"   
+            
+            >
+                                <Border CornerRadius="50">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Images/TravelEaseMockLogo.png"/>
+                                    </Border.Background>
+                                </Border>
+                            </Border>
+
+                        </ControlTemplate>
+
+                    </Button.Template>
+
+                </Button>
+
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+
+
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="2">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height ="*"/>
+                        <RowDefinition Height ="2*"/>
+                        <RowDefinition Height ="*"/>
+
+                    </Grid.RowDefinitions>
+
+
+                    <Border Background="#F1F1F1"
+                        CornerRadius="18"
+                        BorderBrush="Gray"
+                        BorderThickness="1"
+                        Margin="0,0,26,0"
+                            Grid.Row="1">
+
+                        <TextBox  
+                          Margin="0,0,26,0"
+                          x:Name="SearchBox"
+                          Background="Transparent"
+                          BorderThickness="0"
+                          VerticalContentAlignment="Center"
+                          Padding="10,0,35,0"
+                          FontSize="14"
+                          Text="Search..."
+                          
+                          
+                          Foreground="Gray" />
+
+                    </Border>
+                </Grid>
+            </Grid>
+
+
+
+
+            <Frame Grid.Row="1"
+                   Grid.Column="1"
+                   x:Name="TravellerMainFrame"
+                   NavigationUIVisibility="Hidden"
+                />
+
+        </Grid>
+    </Border>
+
+</Window>

@@ -1,0 +1,169 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Arrow.png" />
+    <None Remove="Images\Bahamas.jpeg" />
+    <None Remove="Images\Bali Spa Village.jpeg" />
+    <None Remove="Images\Bali.jpeg" />
+    <None Remove="Images\Barcelona.jpeg" />
+    <None Remove="Images\Carribean Sea.jpeg" />
+    <None Remove="Images\Chiang Mai Retreat.jpeg" />
+    <None Remove="Images\dottedPathIcon.png" />
+    <None Remove="Images\ExitIcon.png" />
+    <None Remove="Images\Florence.jpeg" />
+    <None Remove="Images\Golden Circle.jpeg" />
+    <None Remove="Images\Grand Canyon.jpeg" />
+    <None Remove="Images\Iceland Highlands.jpeg" />
+    <None Remove="Images\Jamaica.jpeg" />
+    <None Remove="Images\Java Island.jpeg" />
+    <None Remove="Images\Key West.jpeg" />
+    <None Remove="Images\Kyoto.jpeg" />
+    <None Remove="Images\Lombok.jpeg" />
+    <None Remove="Images\Maasai Mara.jpeg" />
+    <None Remove="Images\Madrid.jpeg" />
+    <None Remove="Images\Miami Beach.jpeg" />
+    <None Remove="Images\Nara.jpeg" />
+    <None Remove="Images\Ngorongoro Crater.jpeg" />
+    <None Remove="Images\Orlando.jpeg" />
+    <None Remove="Images\Osaka.jpeg" />
+    <None Remove="Images\Phuket Wellness Center.jpeg" />
+    <None Remove="Images\PlusSymbol.png" />
+    <None Remove="Images\Pompeii.jpeg" />
+    <None Remove="Images\Reykjavik.jpeg" />
+    <None Remove="Images\Rocky Mountains.jpeg" />
+    <None Remove="Images\Rome.jpeg" />
+    <None Remove="Images\San Sebastian.jpeg" />
+    <None Remove="Images\Serengeti.jpeg" />
+    <None Remove="Images\TravelEaseMockLogo.png" />
+    <None Remove="Images\Yosemite National Park.jpeg" />
+    <None Remove="TravelEaseMockLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bahamas.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bali Spa Village.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bali.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Barcelona.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Carribean Sea.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Chiang Mai Retreat.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\dottedPathIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\ExitIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Florence.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Golden Circle.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Grand Canyon.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Iceland Highlands.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Jamaica.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Java Island.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Key West.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Kyoto.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Lombok.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Maasai Mara.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Madrid.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Miami Beach.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Nara.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Ngorongoro Crater.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Orlando.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Osaka.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Phuket Wellness Center.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PlusSymbol.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Pompeii.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Reykjavik.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Rocky Mountains.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Rome.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\San Sebastian.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Serengeti.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\TravelEaseMockLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Yosemite National Park.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="TravelEaseMockLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
+    <PackageReference Include="runtime.win-arm64.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win-x64.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win-x86.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+</Project>
