@@ -16,6 +16,12 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace TravelEaseFixed.MVVM.ViewModel
 {
 
+    public class Info
+    {
+        
+    }
+
+
     public class BookingCard
     {
         private string _name, _tid, _stdate, _eddate, _status, _payment, _img;
