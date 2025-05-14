@@ -45,7 +45,7 @@
 
             <Button
             Grid.Column="1"
-            Click="NavToTripInfo"            
+            Command="{Binding search}"            
                 />
         </Grid>
 

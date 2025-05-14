@@ -86,11 +86,37 @@ Select top 1 * from App_User where email = @name and password = @pass
 end
 
 
+create or alter Function IfPersonTrav (@id INT)
+returns bit
+as Begin
+If exists (Select * from User_Person where user_id = @id)
+begin
+ return 1
+end
+return 0 
+end
 
+create or alter Procedure getInfo @u_id INT
+as
+Begin
+If (dbo.IfPersonTrav(@u_id) = 1)
+begin
+ Select * from User_Person u join App_User a on a.user_id = u.user_id where u.user_id = @u_id
+end
+
+else
+begin
+ Select * from User_Corporate u join App_User a on a.user_id = u.user_id where u.user_id = @u_id
+end
+End
+
+Select * from Booking where user_id = 81
 
 Select * from App_User
 
+Select dbo.IfPersonTrav(81)
 
+exec getInfo 1
 exec UserAuth 'user16@example.com', 'pass016'
 exec searchResult '%Advent%'
 exec TripType 49

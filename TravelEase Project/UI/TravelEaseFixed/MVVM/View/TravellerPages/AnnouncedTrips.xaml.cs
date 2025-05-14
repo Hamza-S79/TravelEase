@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TravelEaseFixed.MVVM.ViewModel;
 namespace TravelEaseFixed.MVVM.View.TravellerPages
 {
     /// <summary>
@@ -21,10 +21,11 @@ namespace TravelEaseFixed.MVVM.View.TravellerPages
     public partial class AnnouncedTrips : Page
     {
         Frame pf;
-        public AnnouncedTrips(Frame _pf)
+        public AnnouncedTrips(Frame _pf, int _id)
         {
             InitializeComponent();
             pf = _pf;
+            DataContext = new TravellerBackend(_id);
         }
 
         private void NavToTripInfo(object s, RoutedEventArgs e)

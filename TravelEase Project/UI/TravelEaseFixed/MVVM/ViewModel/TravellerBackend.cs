@@ -18,7 +18,23 @@ namespace TravelEaseFixed.MVVM.ViewModel
 
     public class Info
     {
-        
+        string _f_name, _l_name, _age, _email, _u_id, _contact, _password, _nation, _joined_date;
+
+        public string f_name{ get{ return _f_name; } set{ _f_name = value; } }
+        public string l_name{ get{ return _l_name; } set{ _l_name = value; } }
+        public string age{ get{ return _age; } set{ _age = value; } }
+        public string email{ get{ return _email; } set{ _joined_date = value; } }
+        public string u_id{ get{ return _u_id; } set{ _u_id = value; } }
+        public string contact{ get{ return _contact; } set{ _contact = value; } }
+        public string password{ get{ return _password; } set{ _password = value; } }
+        public string nationality{ get{ return _nation; } set{ _nation = value; } }
+        public string joined_date{ get{ return _joined_date; } set{ _joined_date = value; } }
+
+        public Info()
+        {
+            
+        }
+
     }
 
 
@@ -69,6 +85,8 @@ namespace TravelEaseFixed.MVVM.ViewModel
         int id;
         int temp;
         string e, s, type;
+        Info info;
+        bool if_person;
         //Booking Variables
             private ObservableCollection<BookingCard> _List_Bookings;
             public ObservableCollection<BookingCard> List_Bookings { get { return _List_Bookings; } set { _List_Bookings = value; OnPropertyChanged(nameof(List_Bookings)); } }
@@ -168,29 +186,66 @@ namespace TravelEaseFixed.MVVM.ViewModel
                 List_Bookings = new ObservableCollection<BookingCard>();
                 SqlConnection conn = new SqlConnection("Data Source = HP\\SQLEXPRESS01; Initial Catalog = TravelEase; Integrated Security = True;");
                 conn.Open();
-                string q = "Select * from Booking b join Announced_Trip a on a.announced_trip_id = b.announced_trip_id where b.user_id = " + id.ToString();
+                string q = "Select * from Booking b join Announced_Trip a on a.announced_trip_id = b.announced_trip_id where b.user_id = " + id.ToString() + " and a.begin_date > GETDATE()";
                 SqlCommand co = new SqlCommand(q, conn);
                 SqlDataReader reader = co.ExecuteReader();
                 while (reader.Read()) 
                 {
-                    List_Bookings.Add(new BookingCard { 
-                        Start_date = reader["begin_date"].ToString(),
-                        End_date = reader["end_date"].ToString(),
-                        Booking_status = reader["status"].ToString(),
-                        Payment_status = reader["payment_status"].ToString(),
-                        Trip_id = reader["announced_trip_id"].ToString(),
-                        Booking_id = reader["booking_id"].ToString(),
-                        Price = reader["package_price"].ToString(),
-                        });
+                List_Bookings.Add(new BookingCard {
+                    Name = if_person ? info.f_name + " " + info.l_name : info.f_name,
+                    Start_date = reader["begin_date"].ToString(),
+                    End_date = reader["end_date"].ToString(),
+                    Booking_status = reader["status"].ToString(),
+                    Payment_status = reader["payment_status"].ToString(),
+                    Trip_id = reader["announced_trip_id"].ToString(),
+                    Booking_id = reader["booking_id"].ToString(),
+                    Price = reader["package_price"].ToString(),
+                });
                     OnPropertyChanged();
             }
 
         }
+
+            private void getInfo() 
+            {
+                SqlConnection conn = new SqlConnection("Data Source = HP\\SQLEXPRESS01; Initial Catalog = TravelEase; Integrated Security = True;");
+                conn.Open();
+
+                SqlCommand com = new SqlCommand("Select dbo.IfPersonTrav("+ id.ToString()+")", conn);
+                if_person = Convert.ToBoolean(com.ExecuteScalar());
+                com = new SqlCommand("exec getInfo "+ id.ToString(), conn);
+                SqlDataReader reader = com.ExecuteReader();
+                reader.Read();
+                if (if_person)
+                    info = new Info
+                    {
+                        f_name = reader["first_name"].ToString(),
+                        l_name = reader["last_name"].ToString(),
+                        age = reader["age"].ToString(),
+                        contact = reader["contact"].ToString(),
+                        email = reader["email"].ToString(),
+                        joined_date = reader["joined_date"].ToString(),
+                        password = reader["password"].ToString(),
+                        nationality = reader["nationality"].ToString()
+                    };
+                else
+                    info = new Info
+                    {
+                        f_name = reader["company_name"].ToString(),
+                        email = reader["email"].ToString(),
+                        joined_date = reader["joined_date"].ToString(),
+                        password = reader["password"].ToString(),
+                        nationality = reader["nationality"].ToString()
+                    };
+                conn.Close();
+
+            }
         //=================
 
         public TravellerBackend(int _id)
         {
             id = _id;
+            getInfo();
             generateList();
             generateBookings();
             search = new RelayCommand(o => {

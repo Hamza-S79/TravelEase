@@ -85,6 +85,7 @@
                     Height="50"
                     Width="50"
                     HorizontalAlignment="Right"
+                    Click="go_to_Login"
                         >
 
                     <Button.Template>

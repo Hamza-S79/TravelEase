@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TravelEaseFixed.MVVM.View.OtherWindows;
 using TravelEaseFixed.MVVM.View.TravellerPages;
 namespace TravelEaseFixed
 {
@@ -24,9 +25,11 @@ namespace TravelEaseFixed
             TravellerMainFrame.Navigate(new TravHome());
         }
 
-        private void NavToAnnTrips(object s, RoutedEventArgs e) { TravellerMainFrame.Navigate(new AnnouncedTrips(TravellerMainFrame)); }
+        private void NavToAnnTrips(object s, RoutedEventArgs e) { TravellerMainFrame.Navigate(new AnnouncedTrips(TravellerMainFrame, id)); }
         private void NavToBookings(object s, RoutedEventArgs e) { TravellerMainFrame.Navigate(new TravBookings(TravellerMainFrame, id));}
         private void NavToActTrips(object s, RoutedEventArgs e) { TravellerMainFrame.Navigate(new ActiveTrips(TravellerMainFrame, id)); }
         private void NavToHome(object s, RoutedEventArgs e) { TravellerMainFrame.Navigate(new TravHome()); }
+
+        private void go_to_Login(object s, RoutedEventArgs e) { Login log = new Login(); log.Show(); this.Hide(); }
     }
 }
