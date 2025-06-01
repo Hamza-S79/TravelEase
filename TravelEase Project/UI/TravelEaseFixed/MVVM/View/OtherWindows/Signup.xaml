@@ -13,13 +13,32 @@
         </Grid.ColumnDefinitions>
 
         <!-- Left Side (Sign Form)-->
-        <Grid Grid.Column="0" Background="#faf0e6" >
+        <Grid Grid.Column="0" Background="Linen" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="80*"/>
+                <RowDefinition Height="5*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-
+            <TextBlock 
+                Grid.Row="2"
+                HorizontalAlignment="Center" FontSize="11" Foreground="Gray">
+                <Run Text="Already have an account? " />
+                <Span Cursor="Hand">
+                    <Span.Style>
+                        <Style TargetType="Span">
+                            <Setter Property="Foreground" Value="Gray"/> <!-- Ensure Value is set here -->
+                            <Setter Property="TextDecorations" Value="Underline"/> <!-- Ensure Value is set here -->
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="Black"/> <!-- Value specified here as well -->
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Span.Style>
+                    <Run Text="Login" MouseLeftButtonUp="goLogin"/>
+                </Span>
+            </TextBlock>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
@@ -49,35 +68,11 @@
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
+                        <RadioButton Grid.Column="0" Style="{StaticResource MajorRadioButton}" Margin = "10,0,10,0" Content = "Traveller" GroupName="Form" IsChecked="True"/>
+                        <RadioButton Grid.Column="1" Style="{StaticResource MajorRadioButton}" Margin = "10,0,10,0" Content = "Operator" GroupName="Form"/>
+                        <RadioButton Grid.Column="2" Style="{StaticResource MajorRadioButton}" Margin = "10,0,10,0" Content = "Hotel" GroupName="Form"/>
 
-                        <Button Content="Traveler" 
-                            Template="{StaticResource NoMouseOverButtonTemplate}"
-                            Command="{Binding SwitchFormCommand}" 
-                            CommandParameter="Traveler"
-                            Background="{Binding TravelerButtonColor}"
-                            BorderBrush="White"
-                            Grid.Column="0"
-                            Margin="10,0"/>
-                        <!-- Margin of 10 on left and right -->
 
-                        <Button Content="Operator" 
-                            Template="{StaticResource NoMouseOverButtonTemplate}"
-                            Command="{Binding SwitchFormCommand}" 
-                            CommandParameter="Operator"
-                            Background="{Binding OperatorButtonColor}"
-                            Grid.Column="1"
-                            Margin="10,0" BorderBrush="White"/>
-                        <!-- Margin of 10 on left and right -->
-
-                        <Button Content="Hotel" 
-                            Template="{StaticResource NoMouseOverButtonTemplate}"
-                            Command="{Binding SwitchFormCommand}" 
-                            CommandParameter="Hotel"
-                            Background="{Binding HotelButtonColor}"
-                            Grid.Column="2"
-                            BorderBrush="White"
-                            Margin="10,0"/>
-                        <!-- Margin of 10 on left and right -->
                     </Grid>
 
                     <Grid Grid.Row="2" >
@@ -87,7 +82,8 @@
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="1">
-                            <ContentControl Content="{Binding CurrentForm}" />
+                            <Frame x:Name="SignUpForms"
+                                   NavigationUIVisibility="Hidden"/>
                         </Grid>
                     </Grid>
 

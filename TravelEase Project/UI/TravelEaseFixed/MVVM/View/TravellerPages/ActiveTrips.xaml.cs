@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TravelEaseFixed.MVVM.ViewModel;
 namespace TravelEaseFixed.MVVM.View.TravellerPages
 {
     /// <summary>
@@ -26,6 +26,7 @@ namespace TravelEaseFixed.MVVM.View.TravellerPages
             InitializeComponent();
             pf = _pf;
             id = _id;
+            DataContext = new ActiveTripsModel(_id);
         }
 
         private void Back(object s, RoutedEventArgs e)

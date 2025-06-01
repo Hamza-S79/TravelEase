@@ -28,10 +28,15 @@
                 <ColumnDefinition Width = "*"/>
                 <ColumnDefinition Width = "*"/>
             </Grid.ColumnDefinitions>
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="3">
+                <Image Source="{Binding active_image_path}" Stretch="Uniform"/>
 
-            <Button Style="{StaticResource NavButton}" Content=" ON : TripDetails"
-            Click="Back"
-                Grid.Column="2"/>
+            </Border>
+            <Button Style="{StaticResource RoundedNavButton}" Content="Go back to List"
+                Click="Back"
+                Grid.Column="2"
+                Margin="15"
+                />
         </Grid>
 
         <ListBox Grid.Row="1" Background="Transparent" ItemsSource="{Binding itineraries}">
@@ -55,15 +60,17 @@
                         <Border Grid.Column="0"
                             >
                             <Border.Background>
-                                <ImageBrush ImageSource="../../../Images/Arrow.png" Stretch="Fill"/>
+                                <ImageBrush ImageSource="../../../Images/Arrow.png" Stretch="Uniform"/>
                             </Border.Background>
                         </Border>
                         <Button Grid.Column="1"
                             VerticalAlignment="Stretch"
-                                
+                            Tag="{Binding}"
+                            Click="selectItinerary"
                                 >
                             <Button.Template>
                                 <ControlTemplate>
+                                    
                                     <Border
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="{TemplateBinding VerticalAlignment}"
@@ -73,7 +80,8 @@
                                          BorderThickness="1"
                                          
                                          >
-                                        <TextBlock
+                                        <Viewbox Stretch="Uniform">
+                                            <TextBlock
                                              Text="{Binding}"
                                              VerticalAlignment="Center"
                                              HorizontalAlignment="Center"
@@ -82,7 +90,7 @@
                  
                                              Foreground="{TemplateBinding Foreground}"
                                              />
-
+                                        </Viewbox>
                                     </Border>
 
                                     <ControlTemplate.Triggers>
@@ -134,18 +142,18 @@
             <TextBlock Grid.Column="0" Grid.Row="0"
                    Foreground="Black" FontFamily="Gabriola" FontSize="40"
                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                   Text="{Binding tripId, StringFormat='# {0}'}"
+                   Text="{Binding ann_tripId, StringFormat='Trip# {0}'}"
                    />
 
             <TextBlock Grid.Column="0" Grid.Row="1"
                    Foreground="Black" FontFamily="Gabriola" FontSize="40"
                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                   Text="{Binding }"
+                   Text="{Binding Op_Name}"
                    />
             <TextBlock Grid.Column="0" Grid.Row="2"
                    Foreground="Black" FontFamily="Gabriola" FontSize="40"
                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                   Text="{Binding }"
+                   Text="{Binding Op_Id, StringFormat='Operator# {0}'}"
                    />
             <TextBlock Grid.Column="1" Grid.Row="0"
                    Foreground="Black" FontFamily="Gabriola" FontSize="40"
@@ -170,7 +178,7 @@
 
 
 
-            <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource NavButton}" Content="BOOK THIS TRIP!"/>
+            <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource RoundedNavButton}" Content="BOOK THIS TRIP!" Margin="35,0,35,5"/>
 
 
 

@@ -10,26 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TravelEaseFixed.MVVM.View.OtherWindows
 {
     /// <summary>
-    /// Interaction logic for Signup.xaml
+    /// Interaction logic for OperatorForm.xaml
     /// </summary>
-    public partial class Signup : Window
+    public partial class OperatorForm : Page
     {
-        public Signup()
+        public OperatorForm()
         {
             InitializeComponent();
-            SignUpForms.Navigate(new TravellerForm());
-        }
-
-        public void goLogin(object s, MouseButtonEventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-            Window.GetWindow(this)?.Close();
         }
     }
 }

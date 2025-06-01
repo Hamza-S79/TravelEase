@@ -5,9 +5,56 @@
         <ResourceDictionary.MergedDictionaries>
             <ResourceDictionary Source="Colors.xaml"/>
         </ResourceDictionary.MergedDictionaries>
-    
 
 
+    <Style x:Key="RoundedNavButton"
+           TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border   Background= "{TemplateBinding Background}"
+                     Height="{TemplateBinding Height}"
+                     CornerRadius="30"
+                     >
+
+                        <TextBlock Text = "{TemplateBinding Property=Content}"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          FontSize="25"
+                          Foreground="{TemplateBinding Foreground}"
+                          FontFamily="Gabriola"
+                         >
+
+                        </TextBlock>
+
+
+
+                    </Border> 
+
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Color2}"/>
+                            <Setter Property="TextBlock.Foreground" Value="White"/>
+                            <Setter Property="TextBlock.FontWeight" Value="DemiBold"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="White"/>
+
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Background" Value="{StaticResource ResourceKey=Color1}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Color1}"/>
+        <Setter Property="Visibility" Value="Visible"/>
+        <Setter Property="Foreground" Value="White "/>
+    </Style>
 
     <Style x:Key="NavButton"
            TargetType="Button">
@@ -19,7 +66,8 @@
                             Height="{TemplateBinding Height}"
         
                             >
-                        <TextBlock Text = "{TemplateBinding Property=Content}"
+                        
+                            <TextBlock Text = "{TemplateBinding Property=Content}"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
                          FontSize="25"
@@ -27,8 +75,8 @@
                          FontFamily="Gabriola"
                         >
 
-
                         </TextBlock>
+                        
 
 
                     </Grid>
@@ -300,6 +348,75 @@
         </Setter>
     </Style>
 
+    <Style x:Key="RoundedTextBox" TargetType="TextBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+
+                        <Border Height="{TemplateBinding Height}"
+                            Width="{TemplateBinding Width}"
+                            Background="#F7F7F7"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="18"
+                            Grid.Column="1"
+                                >
+                        <Viewbox>
+                            <ScrollViewer Focusable="False" x:Name="PART_ContentHost" Margin="15,5,15,5" HorizontalAlignment ="Left" VerticalAlignment="Center">
+                            </ScrollViewer>
+                        </Viewbox>
+                        </Border>
+              
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="BorderBrush" Value="{StaticResource Color2}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter Property="BorderBrush" Value="{StaticResource Color1}"/>
+                        </Trigger>
+
+
+                    </ControlTemplate.Triggers>
+
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style  x:Key="MajorRadioButton"  TargetType="RadioButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border CornerRadius="20"
+                            Background="{TemplateBinding Background}">
+                        
+                            <TextBlock Text="{TemplateBinding Property=Content}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   FontFamily="Gabriola"/>
+                        
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Color2}"/>
+                            <Setter Property="FontWeight" Value="DemiBold"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Background" Value="{StaticResource Color1}"/>
+                            <Setter Property="FontWeight" Value="Medium"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 
 </ResourceDictionary>

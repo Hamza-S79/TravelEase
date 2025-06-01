@@ -133,19 +133,21 @@
                                     <ImageBrush ImageSource="../../../Images/dottedPathIcon.png"/>
                                 </Border.Background>
                             </Border>
-
-                            <TextBlock Grid.Column="1" Grid.Row="3"
+                 
+                                <Viewbox 
+                                     Stretch="Uniform"
+                                    Grid.Column="1" Grid.Row="3">
+                                <TextBlock 
                                    Text="{Binding Start_loc}"
-                                   FontFamily="Gabriola"
-                                   FontSize="30"
-                                   HorizontalAlignment="Center"/>
-
-                            <TextBlock Grid.Column="3" Grid.Row="3"
+                                   FontFamily="Gabriola"/>
+                                </Viewbox>
+                            <Viewbox                                     
+                                Stretch="Uniform"
+                                Grid.Column="3" Grid.Row="3">
+                                <TextBlock 
                                    Text="{Binding End_loc}"
-                                   FontFamily="Gabriola"
-                                   FontSize="30"
-                                   HorizontalAlignment="Center"/>
-
+                                   FontFamily="Gabriola"/>
+                            </Viewbox>
                             <TextBlock Grid.Column="1" Grid.Row="4"
                                    Text="{Binding Beginning_Date}"
                                    FontFamily="Gabriola"

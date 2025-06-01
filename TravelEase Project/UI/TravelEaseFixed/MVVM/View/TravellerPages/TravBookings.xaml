@@ -16,7 +16,11 @@
         <ScrollViewer
                   Grid.Row="1"
                   PanningRatio="0.00001"
-                  PanningDeceleration="2000">
+                  PanningDeceleration="2000"
+
+            >
+
+
             <ListBox ItemsSource="{Binding List_Bookings}" 
                  HorizontalAlignment="Stretch"
                  HorizontalContentAlignment="Stretch"

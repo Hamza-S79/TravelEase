@@ -30,7 +30,9 @@ namespace TravelEaseFixed.MVVM.View.TravellerPages
 
         private void NavToTripInfo(object s, RoutedEventArgs e)
         {
-            pf.Navigate(new TripInfo(pf,1));
+            Button b = s as Button;
+            int id = Convert.ToInt32(b.Tag);
+            pf.Navigate(new TripInfo(pf,id));
         }
 
 

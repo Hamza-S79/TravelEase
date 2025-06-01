@@ -52,5 +52,7 @@ namespace TravelEaseVS.MVVM.View.Announced_Trip_Pages
         {
             parentFrame.GoBack();
         }
+
+
     }
 }

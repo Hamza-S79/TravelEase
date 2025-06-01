@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TravelEaseFixed.MVVM.ViewModel;
 namespace TravelEaseFixed.MVVM.View.TravellerPages
 {
     /// <summary>
@@ -21,11 +21,12 @@ namespace TravelEaseFixed.MVVM.View.TravellerPages
     public partial class TripInfo : Page
     {
         Frame pf;
+        
         public TripInfo(Frame _pf,int _id)
         {
             InitializeComponent();
             pf = _pf;
-
+            DataContext = new TripInfoModel(_id);
         }
 
 
@@ -34,5 +35,14 @@ namespace TravelEaseFixed.MVVM.View.TravellerPages
             pf.GoBack();
         }
 
+        public void selectItinerary(object sender, RoutedEventArgs e)
+        {
+            Button itinerary = sender as Button;
+            string tag = itinerary.Tag as String;
+            if (DataContext is TripInfoModel)
+            {
+                ((TripInfoModel)DataContext).setImage(tag);
+            }
+        }
     }
 }
